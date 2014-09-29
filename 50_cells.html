@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>50 cells - Performance Lab</title>
+
+  <!-- benchmark.js -->
+  <script src="bower_components/benchmark/vendor/lodash/dist/lodash.compat.js"></script>
+  <script src="bower_components/benchmark/benchmark.js"></script>
+  <script src="lib/benchmark_reporter.js"></script>
+  <link rel="stylesheet" type="text/css" href="lib/benchmark_reporter.css">
+
+  <!-- HOT -->
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/handsontable/dist/jquery.handsontable.full.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="bower_components/handsontable/dist/jquery.handsontable.full.min.css">
+</head>
+<body>
+
+<h1>Performance Lab</h1>
+
+<p>This test compares performance of creating 5x10 grid in DIV vs TABLE vs Handsontable</p>
+
+<link rel="stylesheet" type="text/css" href="50_cells/50_cells.css">
+<script>
+  //run benchmark
+  var suite = new Benchmark.Suite;
+</script>
+
+<script src="50_cells/50_cells.js"></script>
+<script src="50_cells/50_cells_div.js"></script>
+<script src="50_cells/50_cells_table.js"></script>
+<script src="50_cells/50_cells_hot.js"></script>
+
+<script>
+  document.body.appendChild(document.createElement("HR"));
+  benchmarkReporter(suite);
+</script>
+
+</body>
+</html>

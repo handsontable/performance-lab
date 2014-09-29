@@ -1,0 +1,42 @@
+/*div*/
+
+.layer {
+  position: relative;
+  overflow: hidden;
+  width: 700px;
+  height: 100px;
+}
+
+.cell {
+  display: inline-block;
+  position: absolute;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  padding: 1px 1px 1px 1px;
+  box-sizing: border-box;
+  white-space: pre-line;
+}
+
+.firstRow {
+  border-top: 1px solid #000;
+}
+
+.firstCol {
+  border-left: 1px solid #000;
+}
+
+/*table*/
+
+table {
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-spacing: 0;
+}
+
+td {
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+  white-space: pre-line;
+  vertical-align: top;
+}
+
