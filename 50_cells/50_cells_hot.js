@@ -45,9 +45,12 @@
   }
 
   suite.add('HOT create grid', function () {
-    var layer = createGrid(document.body);
+    if (DIV.firstElementChild) {
+      $(DIV.firstElementChild).handsontable("destroy");
+      DIV.removeChild(DIV.firstElementChild);
+    }
+    var layer = createGrid(DIV);
     layer.offsetHeight; //trigger paint
-    document.body.removeChild(layer);
   });
   suite.add('HOT refresh grid', function () {
     refreshGrid(DIV.firstElementChild);

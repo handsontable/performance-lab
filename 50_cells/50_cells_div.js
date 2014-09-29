@@ -197,9 +197,11 @@
 
 
   suite.add('DIV create grid', function () {
-    var layer = createGrid(document.body);
-    layer.offsetHeight; //trigger paint
-    document.body.removeChild(layer);
+    if (DIV.firstElementChild) {
+      DIV.removeChild(DIV.firstElementChild);
+    }
+    createGrid(DIV);
+    DIV.offsetHeight; //trigger paint
   });
 
   createGrid(DIV);
