@@ -47,7 +47,7 @@
 
     for (var row = 0; row < rowCount; row++) {
       for (var col = 0; col < colCount; col++) {
-        var cell = document.createElement('SPAN');
+        var cell = document.createElement('DIV');
         cell.className = "cell";
         cell.appendChild(document.createTextNode(getData(row, col)));
         layer.appendChild(cell);
