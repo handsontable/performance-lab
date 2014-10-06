@@ -52,7 +52,6 @@
         cell.appendChild(document.createTextNode(getData(row, col)));
         layer.appendChild(cell);
         cells.push(cell);
-        cell.offsetHeight;
       }
     }
     return cells;
