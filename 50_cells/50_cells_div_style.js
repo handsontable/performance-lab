@@ -1,9 +1,12 @@
 (function () {
   var H2 = document.createElement("H2");
-  H2.innerHTML = "50 cells in DIV, positioned with inline style";
+  H2.innerHTML = "50 cells in DIV, positioned with STYLE element";
 
   var DIV = document.createElement("DIV");
   DIV.id = "div-container";
+
+  var STYLE = document.createElement("STYLE");
+  DIV.id = "cells-style";
 
   var BUTTON = document.createElement("BUTTON");
   BUTTON.innerHTML = "Create grid!";
@@ -16,6 +19,7 @@
   document.body.appendChild(H2);
   H2.appendChild(BUTTON);
   document.body.appendChild(DIV);
+  document.body.appendChild(STYLE);
 
   //create grid
   function createGrid(element) {
@@ -27,9 +31,9 @@
     var colCount = getColCount();
     var rowCount = getRowCount();
     var cellWidths = measureCellDimensions(cells, 'offsetWidth');
-    //var cellWidths = [25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 95, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25];
+//    var cellWidths = [25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 95, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25, 25];
     var cellHeights = measureCellDimensions(cells, 'offsetHeight');
-    //var cellHeights = [21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 39, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21];
+//    var cellHeights = [21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 39, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21];
     var colWidths = getColWidths(cellWidths, colCount);
     var rowHeights = getRowHeights(cellHeights, rowCount);
     var cellWidths = getAlignedColWidths(colWidths, rowCount)
@@ -168,20 +172,23 @@
 
   //only DOM writes permitted here. No DOM reads!!!!!
   function applyToDOM(cells, cellWidths, cellWidthOffsets, cellHeights, cellHeightOffsets) {
+    var styleTxt = "";
     var cellCount = cells.length;
     for (var cell = 0; cell < cellCount; cell++) {
-      var style = cells[cell].style;
-      style.width = cellWidths[cell] + 'px';
-      style.left = cellWidthOffsets[cell] + 'px';
-      style.height = cellHeights[cell] + 'px';
-      style.top = cellHeightOffsets[cell] + 'px';
+      styleTxt += ".cell:nth-child(" + (cell + 1) + ") {\n"
+      styleTxt += 'width: ' + cellWidths[cell] + 'px;\n';
+      styleTxt += 'left: ' + cellWidthOffsets[cell] + 'px;\n';
+      styleTxt += 'height: ' + cellHeights[cell] + 'px;\n';
+      styleTxt += 'top: ' + cellHeightOffsets[cell] + 'px;\n';
       if (cellWidthOffsets[cell] === 0) {
-        cells[cell].className += " firstCol";
+        styleTxt += 'border-left: 1px solid #000;\n';
       }
       if (cellHeightOffsets[cell] === 0) {
-        cells[cell].className += " firstRow";
+        styleTxt += 'border-top: 1px solid #000;\n';
       }
+      styleTxt += "}\n";
     }
+    STYLE.textContent = styleTxt;
     cells[0].parentNode.style.height = cellHeightOffsets[cellCount - 1] + cellHeights[cellCount - 1] + 'px';
   }
 
