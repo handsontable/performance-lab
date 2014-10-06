@@ -204,5 +204,14 @@
     createGrid(DIV);
   });
 
+  suite.add('DIV with visibility=hidden create grid', function () {
+    if (DIV.firstElementChild) {
+      DIV.removeChild(DIV.firstElementChild);
+    }
+    DIV.className = "hidden";
+    createGrid(DIV);
+    DIV.className = "";
+  });
+
   createGrid(DIV);
 })();
