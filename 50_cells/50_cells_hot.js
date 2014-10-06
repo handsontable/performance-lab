@@ -50,7 +50,6 @@
       DIV.removeChild(DIV.firstElementChild);
     }
     var layer = createGrid(DIV);
-    layer.offsetHeight; //trigger paint
   });
   suite.add('HOT refresh grid', function () {
     refreshGrid(DIV.firstElementChild);

@@ -200,7 +200,6 @@
       DIV.removeChild(DIV.firstElementChild);
     }
     createGrid(DIV);
-    DIV.offsetHeight; //trigger paint
   });
 
   createGrid(DIV);
