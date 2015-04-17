@@ -1,20 +1,24 @@
 {
-  "name": "Performance Lab",
-  "version": "0.0.0",
+  "name": "performance-lab",
+  "version": "0.1.0",
+  "homepage": "https://github.com/handsontable/performance-lab",
   "authors": [
-    "Marcin Warpechowski <warpech@gmail.com>"
+    "Handsoncode <hello@handsontable.com>"
+  ],
+  "description": "Performance tests for Handsontable",
+  "keywords": [
+    "handsontable",
+    "performance",
+    "tests"
   ],
   "license": "MIT",
-  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "benchmark/bower_components"
   ],
   "dependencies": {
-    "handsontable": "~0.11.3",
-    "benchmark": "~1.0.0"
+    "Chart.js": "~1.0.2",
+    "axios": "~0.5.4"
   }
 }
