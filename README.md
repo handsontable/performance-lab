@@ -1,6 +1,6 @@
 # Performance Lab
 
-JavaScript performance tests for Handsontable
+JavaScript performance tests for Handsontable (http://handsontable.github.io/performance-lab/benchmark/)
 
 ## Install
 
