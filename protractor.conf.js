@@ -17,10 +17,18 @@ exports.config = {
       'args': ['--js-flags=--expose-gc'],
       'perfLoggingPrefs': {
         'traceCategories': 'blink.console,disabled-by-default-devtools.timeline'
+      },
+      'mobileEmulation': {
+        'deviceMetrics': {
+          'width': 600,
+          'height': 960,
+          'pixelRatio': 2
+        }
       }
     },
     loggingPrefs: {
-      performance: 'ALL'
+      performance: 'ALL',
+      browser: 'ALL'
     }
   },
 

@@ -43,7 +43,7 @@
           });
         }
         else {
-          tooltip.text = parseTooltipMetrics(tooltip.text);
+          tooltip.text = parseTooltipMetrics(metric, tooltip.text);
         }
         tooltip.custom = null;
         tooltip.draw();
