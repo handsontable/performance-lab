@@ -202,7 +202,7 @@ describe('navigating by arrow keys (all modules) - rowHeaders: true, colsHeader:
   var TEST_DESC = 'disabled_plugins/navigating/';
   var hotOptions = {
     rowHeaders: true,
-    colHeader: true
+    colHeaders: true
   };
 
   it('arrow down (started from cell 20,20)', function(done) {

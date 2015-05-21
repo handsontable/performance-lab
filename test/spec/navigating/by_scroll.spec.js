@@ -493,7 +493,7 @@ describe('navigating by scroll (handsontable enabled all modules) - rowHeaders: 
   var TEST_DESC = 'enabled_all_modules/navigating/';
   var hotOptions = {
     rowHeaders: true,
-    colHeader: true
+    colHeaders: true
   };
 
   // scroll down
