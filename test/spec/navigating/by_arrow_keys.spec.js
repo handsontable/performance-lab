@@ -199,7 +199,7 @@ describe('navigating by arrow keys (enabled all modules)', function() {
 // ALL MODULES (rowHeaders: true, colsHeader: true)
 //
 describe('navigating by arrow keys (all modules) - rowHeaders: true, colsHeader: true', function() {
-  var TEST_DESC = 'disabled_plugins/navigating/';
+  var TEST_DESC = 'enabled_all_modules/navigating/';
   var hotOptions = {
     rowHeaders: true,
     colHeaders: true
