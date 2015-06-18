@@ -41,6 +41,8 @@ Run tests
 
 Arguments:
 - ```--hot-branch``` - Select version of Handsontable to test or branch name from Handsontable repository.
+- ```--gen-map-file``` - Regenerate `results/map.json` file which contains all available generated reports.
+- ```--server``` - Run local HTTP server.
 
 ## License
 
