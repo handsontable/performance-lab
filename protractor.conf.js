@@ -1,5 +1,6 @@
 
 require('traceur/bin/traceur-runtime.js');
+require('reflect-metadata');
 
 var benchpress = require('benchpress/benchpress');
 var dirTree = require('dir-tree');
@@ -22,7 +23,7 @@ exports.config = {
         'deviceMetrics': {
           'width': 600,
           'height': 960,
-          'pixelRatio': 2
+          'pixelRatio': 1
         }
       }
     },
