@@ -2,7 +2,7 @@
 require('traceur/bin/traceur-runtime.js');
 require('reflect-metadata');
 
-var benchpress = require('benchpress/benchpress');
+var benchpress = require('benchpress');
 var dirTree = require('dir-tree');
 var fs = require('fs-extra');
 var utils = require('./lib/utils');
