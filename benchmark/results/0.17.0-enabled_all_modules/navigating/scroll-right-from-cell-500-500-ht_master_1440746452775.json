@@ -1,0 +1,2461 @@
+{
+  "description": {
+    "id": "enabled_all_modules/navigating/scroll-right-from-cell-500-500-ht_master",
+    "metrics": {
+      "scriptTime": "script execution time in ms, including gc and render",
+      "pureScriptTime": "script execution time in ms, without gc nor render",
+      "renderTime": "render time in ms",
+      "gcTime": "gc time in ms",
+      "gcAmount": "gc amount in kbytes",
+      "majorGcTime": "time of major gcs in ms"
+    },
+    "description": {
+      "forceGc": false,
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36",
+      "sampleSize": 100,
+      "regressionSlopeMetric": "scriptTime",
+      "lang": "js",
+      "url": "http://localhost:8080/disabled_plugins.html?"
+    }
+  },
+  "completeSample": [
+    {
+      "runIndex": 0,
+      "timeStamp": "2015-08-28T07:20:49.089Z",
+      "values": {
+        "scriptTime": 1.0879999999888241,
+        "pureScriptTime": 1.0879999999888241,
+        "gcTime": 2.3270000000484288,
+        "majorGcTime": 0,
+        "gcAmount": 6458.504,
+        "renderTime": 0
+      }
+    },
+    {
+      "runIndex": 1,
+      "timeStamp": "2015-08-28T07:20:49.143Z",
+      "values": {
+        "scriptTime": 6.219000000040978,
+        "pureScriptTime": 6.157000000122935,
+        "gcTime": 2.5200000000186265,
+        "majorGcTime": 0,
+        "gcAmount": 383.848,
+        "renderTime": 0.5849999997299165
+      }
+    },
+    {
+      "runIndex": 2,
+      "timeStamp": "2015-08-28T07:20:49.290Z",
+      "values": {
+        "scriptTime": 43.65399999986403,
+        "pureScriptTime": 27.50399999972433,
+        "gcTime": 0.12100000004284084,
+        "majorGcTime": 0,
+        "gcAmount": 6.272,
+        "renderTime": 21.316000000340864
+      }
+    },
+    {
+      "runIndex": 3,
+      "timeStamp": "2015-08-28T07:20:49.319Z",
+      "values": {
+        "scriptTime": 5.125,
+        "pureScriptTime": 5.054000000003725,
+        "gcTime": 0.5780000002123415,
+        "majorGcTime": 0,
+        "gcAmount": 710.224,
+        "renderTime": 0.31499999994412065
+      }
+    },
+    {
+      "runIndex": 4,
+      "timeStamp": "2015-08-28T07:20:49.367Z",
+      "values": {
+        "scriptTime": 7.622999999905005,
+        "pureScriptTime": 7.561999999918044,
+        "gcTime": 0.1270000000949949,
+        "majorGcTime": 0,
+        "gcAmount": 185.04,
+        "renderTime": 0.3279999999795109
+      }
+    },
+    {
+      "runIndex": 5,
+      "timeStamp": "2015-08-28T07:20:49.391Z",
+      "values": {
+        "scriptTime": 4.28000000002794,
+        "pureScriptTime": 4.221000000135973,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.28199999989010394
+      }
+    },
+    {
+      "runIndex": 6,
+      "timeStamp": "2015-08-28T07:20:49.443Z",
+      "values": {
+        "scriptTime": 19.631999999983236,
+        "pureScriptTime": 16.0429999998305,
+        "gcTime": 0.14799999981187284,
+        "majorGcTime": 0,
+        "gcAmount": 186.104,
+        "renderTime": 6.747000000206754
+      }
+    },
+    {
+      "runIndex": 7,
+      "timeStamp": "2015-08-28T07:20:49.469Z",
+      "values": {
+        "scriptTime": 4.327000000048429,
+        "pureScriptTime": 4.327000000048429,
+        "gcTime": 0.1869999999180436,
+        "majorGcTime": 0,
+        "gcAmount": 715.528,
+        "renderTime": 0.3380000002216548
+      }
+    },
+    {
+      "runIndex": 8,
+      "timeStamp": "2015-08-28T07:20:49.503Z",
+      "values": {
+        "scriptTime": 4.8600000001024455,
+        "pureScriptTime": 4.8600000001024455,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.30500000016763806
+      }
+    },
+    {
+      "runIndex": 9,
+      "timeStamp": "2015-08-28T07:20:49.528Z",
+      "values": {
+        "scriptTime": 5.3140000000130385,
+        "pureScriptTime": 5.3140000000130385,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.23700000019744039
+      }
+    },
+    {
+      "runIndex": 10,
+      "timeStamp": "2015-08-28T07:20:49.576Z",
+      "values": {
+        "scriptTime": 19.292000000132248,
+        "pureScriptTime": 15.395000000251457,
+        "gcTime": 0.17599999997764826,
+        "majorGcTime": 0,
+        "gcAmount": 961.648,
+        "renderTime": 6.359999999869615
+      }
+    },
+    {
+      "runIndex": 11,
+      "timeStamp": "2015-08-28T07:20:49.604Z",
+      "values": {
+        "scriptTime": 4.527999999932945,
+        "pureScriptTime": 4.527999999932945,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.23200000007636845
+      }
+    },
+    {
+      "runIndex": 12,
+      "timeStamp": "2015-08-28T07:20:49.630Z",
+      "values": {
+        "scriptTime": 4.966999999945983,
+        "pureScriptTime": 4.966999999945983,
+        "gcTime": 0.18200000002980232,
+        "majorGcTime": 0,
+        "gcAmount": 537.352,
+        "renderTime": 0.23900000005960464
+      }
+    },
+    {
+      "runIndex": 13,
+      "timeStamp": "2015-08-28T07:20:49.662Z",
+      "values": {
+        "scriptTime": 4.533999999985099,
+        "pureScriptTime": 4.533999999985099,
+        "gcTime": 0.15200000000186265,
+        "majorGcTime": 0,
+        "gcAmount": 395.808,
+        "renderTime": 0.2959999998565763
+      }
+    },
+    {
+      "runIndex": 14,
+      "timeStamp": "2015-08-28T07:20:49.712Z",
+      "values": {
+        "scriptTime": 19.252000000094995,
+        "pureScriptTime": 15.649000000208616,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 6.543999999994412
+      }
+    },
+    {
+      "runIndex": 15,
+      "timeStamp": "2015-08-28T07:20:49.739Z",
+      "values": {
+        "scriptTime": 5.506999999983236,
+        "pureScriptTime": 5.506999999983236,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.23100000014528632
+      }
+    },
+    {
+      "runIndex": 16,
+      "timeStamp": "2015-08-28T07:20:49.766Z",
+      "values": {
+        "scriptTime": 4.622999999905005,
+        "pureScriptTime": 4.622999999905005,
+        "gcTime": 0.17999999993480742,
+        "majorGcTime": 0,
+        "gcAmount": 920.656,
+        "renderTime": 0.2529999997932464
+      }
+    },
+    {
+      "runIndex": 17,
+      "timeStamp": "2015-08-28T07:20:49.860Z",
+      "values": {
+        "scriptTime": 4.859999999869615,
+        "pureScriptTime": 4.859999999869615,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2789999998640269
+      }
+    },
+    {
+      "runIndex": 18,
+      "timeStamp": "2015-08-28T07:20:49.908Z",
+      "values": {
+        "scriptTime": 18.402999999932945,
+        "pureScriptTime": 14.731999999843538,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 6.565999999875203
+      }
+    },
+    {
+      "runIndex": 19,
+      "timeStamp": "2015-08-28T07:20:49.934Z",
+      "values": {
+        "scriptTime": 5.111000000033528,
+        "pureScriptTime": 5.111000000033528,
+        "gcTime": 0.3320000001695007,
+        "majorGcTime": 0,
+        "gcAmount": 713.264,
+        "renderTime": 0.24400000018067658
+      }
+    },
+    {
+      "runIndex": 20,
+      "timeStamp": "2015-08-28T07:20:49.960Z",
+      "values": {
+        "scriptTime": 5.33199999993667,
+        "pureScriptTime": 5.33199999993667,
+        "gcTime": 0.16600000020116568,
+        "majorGcTime": 0,
+        "gcAmount": 201.984,
+        "renderTime": 0.22700000018812716
+      }
+    },
+    {
+      "runIndex": 21,
+      "timeStamp": "2015-08-28T07:20:49.988Z",
+      "values": {
+        "scriptTime": 4.952999999979511,
+        "pureScriptTime": 4.952999999979511,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.23300000000745058
+      }
+    },
+    {
+      "runIndex": 22,
+      "timeStamp": "2015-08-28T07:20:50.038Z",
+      "values": {
+        "scriptTime": 18.851999999955297,
+        "pureScriptTime": 14.959000000031665,
+        "gcTime": 0.1559999999590218,
+        "majorGcTime": 0,
+        "gcAmount": 408.944,
+        "renderTime": 6.8439999998081475
+      }
+    },
+    {
+      "runIndex": 23,
+      "timeStamp": "2015-08-28T07:20:50.067Z",
+      "values": {
+        "scriptTime": 4.671000000089407,
+        "pureScriptTime": 4.671000000089407,
+        "gcTime": 0.21099999989382923,
+        "majorGcTime": 0,
+        "gcAmount": 717.968,
+        "renderTime": 0.20399999991059303
+      }
+    },
+    {
+      "runIndex": 24,
+      "timeStamp": "2015-08-28T07:20:50.093Z",
+      "values": {
+        "scriptTime": 4.824000000022352,
+        "pureScriptTime": 4.824000000022352,
+        "gcTime": 0.18900000001303852,
+        "majorGcTime": 0,
+        "gcAmount": 204.08,
+        "renderTime": 0.25199999986216426
+      }
+    },
+    {
+      "runIndex": 25,
+      "timeStamp": "2015-08-28T07:20:50.118Z",
+      "values": {
+        "scriptTime": 4.396000000182539,
+        "pureScriptTime": 4.396000000182539,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.21799999987706542
+      }
+    },
+    {
+      "runIndex": 26,
+      "timeStamp": "2015-08-28T07:20:50.169Z",
+      "values": {
+        "scriptTime": 18.50400000018999,
+        "pureScriptTime": 14.843000000342727,
+        "gcTime": 0.13100000005215406,
+        "majorGcTime": 0,
+        "gcAmount": 412.6,
+        "renderTime": 7.813000000081956
+      }
+    },
+    {
+      "runIndex": 27,
+      "timeStamp": "2015-08-28T07:20:50.199Z",
+      "values": {
+        "scriptTime": 4.594000000040978,
+        "pureScriptTime": 4.594000000040978,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.20899999979883432
+      }
+    },
+    {
+      "runIndex": 28,
+      "timeStamp": "2015-08-28T07:20:50.228Z",
+      "values": {
+        "scriptTime": 4.780999999959022,
+        "pureScriptTime": 4.59499999997206,
+        "gcTime": 0.18599999998696148,
+        "majorGcTime": 0,
+        "gcAmount": 970.496,
+        "renderTime": 0.4579999998677522
+      }
+    },
+    {
+      "runIndex": 29,
+      "timeStamp": "2015-08-28T07:20:50.253Z",
+      "values": {
+        "scriptTime": 4.760000000009313,
+        "pureScriptTime": 4.760000000009313,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2140000001527369
+      }
+    },
+    {
+      "runIndex": 30,
+      "timeStamp": "2015-08-28T07:20:50.302Z",
+      "values": {
+        "scriptTime": 18.969000000040978,
+        "pureScriptTime": 15.416000000201166,
+        "gcTime": 0.17999999993480742,
+        "majorGcTime": 0,
+        "gcAmount": 372.832,
+        "renderTime": 6.418999999761581
+      }
+    },
+    {
+      "runIndex": 31,
+      "timeStamp": "2015-08-28T07:20:50.326Z",
+      "values": {
+        "scriptTime": 5.122000000206754,
+        "pureScriptTime": 5.122000000206754,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.20900000003166497
+      }
+    },
+    {
+      "runIndex": 32,
+      "timeStamp": "2015-08-28T07:20:50.356Z",
+      "values": {
+        "scriptTime": 4.793999999994412,
+        "pureScriptTime": 4.591999999945983,
+        "gcTime": 0.4170000001322478,
+        "majorGcTime": 0,
+        "gcAmount": 1139.904,
+        "renderTime": 0.3040000000037253
+      }
+    },
+    {
+      "runIndex": 33,
+      "timeStamp": "2015-08-28T07:20:50.387Z",
+      "values": {
+        "scriptTime": 5.041999999899417,
+        "pureScriptTime": 5.041999999899417,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.22500000009313226
+      }
+    },
+    {
+      "runIndex": 34,
+      "timeStamp": "2015-08-28T07:20:50.435Z",
+      "values": {
+        "scriptTime": 18.131000000052154,
+        "pureScriptTime": 14.685999999986961,
+        "gcTime": 0.12599999993108213,
+        "majorGcTime": 0,
+        "gcAmount": 215,
+        "renderTime": 6.3950000000186265
+      }
+    },
+    {
+      "runIndex": 35,
+      "timeStamp": "2015-08-28T07:20:50.463Z",
+      "values": {
+        "scriptTime": 5.307000000029802,
+        "pureScriptTime": 5.307000000029802,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.21399999991990626
+      }
+    },
+    {
+      "runIndex": 36,
+      "timeStamp": "2015-08-28T07:20:50.490Z",
+      "values": {
+        "scriptTime": 5.656999999890104,
+        "pureScriptTime": 5.464999999850988,
+        "gcTime": 0.19200000003911555,
+        "majorGcTime": 0,
+        "gcAmount": 977.28,
+        "renderTime": 0.25
+      }
+    },
+    {
+      "runIndex": 37,
+      "timeStamp": "2015-08-28T07:20:50.515Z",
+      "values": {
+        "scriptTime": 5.561000000219792,
+        "pureScriptTime": 5.561000000219792,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.25
+      }
+    },
+    {
+      "runIndex": 38,
+      "timeStamp": "2015-08-28T07:20:50.571Z",
+      "values": {
+        "scriptTime": 21.432000000029802,
+        "pureScriptTime": 17.21999999973923,
+        "gcTime": 0.13900000019930303,
+        "majorGcTime": 0,
+        "gcAmount": 211.128,
+        "renderTime": 7.388000000268221
+      }
+    },
+    {
+      "runIndex": 39,
+      "timeStamp": "2015-08-28T07:20:50.596Z",
+      "values": {
+        "scriptTime": 4.962999999988824,
+        "pureScriptTime": 4.962999999988824,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.19999999995343387
+      }
+    },
+    {
+      "runIndex": 40,
+      "timeStamp": "2015-08-28T07:20:50.624Z",
+      "values": {
+        "scriptTime": 5.702999999979511,
+        "pureScriptTime": 5.472999999998137,
+        "gcTime": 0.22999999998137355,
+        "majorGcTime": 0,
+        "gcAmount": 982.84,
+        "renderTime": 0.24600000004284084
+      }
+    },
+    {
+      "runIndex": 41,
+      "timeStamp": "2015-08-28T07:20:50.650Z",
+      "values": {
+        "scriptTime": 4.789999999804422,
+        "pureScriptTime": 4.789999999804422,
+        "gcTime": 0.2339999999385327,
+        "majorGcTime": 0,
+        "gcAmount": 174.536,
+        "renderTime": 0.2779999999329448
+      }
+    },
+    {
+      "runIndex": 42,
+      "timeStamp": "2015-08-28T07:20:50.705Z",
+      "values": {
+        "scriptTime": 23.06000000005588,
+        "pureScriptTime": 18.246999999741092,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 8.365000000223517
+      }
+    },
+    {
+      "runIndex": 43,
+      "timeStamp": "2015-08-28T07:20:50.733Z",
+      "values": {
+        "scriptTime": 5.117000000085682,
+        "pureScriptTime": 5.117000000085682,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.22099999990314245
+      }
+    },
+    {
+      "runIndex": 44,
+      "timeStamp": "2015-08-28T07:20:50.758Z",
+      "values": {
+        "scriptTime": 5.054999999934807,
+        "pureScriptTime": 5.054999999934807,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2690000000875443
+      }
+    },
+    {
+      "runIndex": 45,
+      "timeStamp": "2015-08-28T07:20:50.786Z",
+      "values": {
+        "scriptTime": 4.84900000016205,
+        "pureScriptTime": 4.84900000016205,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2260000000242144
+      }
+    },
+    {
+      "runIndex": 46,
+      "timeStamp": "2015-08-28T07:20:50.834Z",
+      "values": {
+        "scriptTime": 17.912000000011176,
+        "pureScriptTime": 14.258000000147149,
+        "gcTime": 0.23700000019744039,
+        "majorGcTime": 0,
+        "gcAmount": 1618.672,
+        "renderTime": 6.898999999975786
+      }
+    },
+    {
+      "runIndex": 47,
+      "timeStamp": "2015-08-28T07:20:50.860Z",
+      "values": {
+        "scriptTime": 5.6100000001024455,
+        "pureScriptTime": 5.6100000001024455,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.26799999992363155
+      }
+    },
+    {
+      "runIndex": 48,
+      "timeStamp": "2015-08-28T07:20:50.892Z",
+      "values": {
+        "scriptTime": 5.503999999957159,
+        "pureScriptTime": 5.503999999957159,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.27900000009685755
+      }
+    },
+    {
+      "runIndex": 49,
+      "timeStamp": "2015-08-28T07:20:50.916Z",
+      "values": {
+        "scriptTime": 4.719000000040978,
+        "pureScriptTime": 4.719000000040978,
+        "gcTime": 0.39700000011362135,
+        "majorGcTime": 0,
+        "gcAmount": 1186.896,
+        "renderTime": 0.19999999995343387
+      }
+    },
+    {
+      "runIndex": 50,
+      "timeStamp": "2015-08-28T07:20:50.965Z",
+      "values": {
+        "scriptTime": 19.391000000061467,
+        "pureScriptTime": 15.604999999981374,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 7.0690000001341105
+      }
+    },
+    {
+      "runIndex": 51,
+      "timeStamp": "2015-08-28T07:20:50.990Z",
+      "values": {
+        "scriptTime": 5.721999999834225,
+        "pureScriptTime": 5.721999999834225,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2820000001229346
+      }
+    },
+    {
+      "runIndex": 52,
+      "timeStamp": "2015-08-28T07:20:51.014Z",
+      "values": {
+        "scriptTime": 0.34799999999813735,
+        "pureScriptTime": 0.34799999999813735,
+        "gcTime": 0.3980000000447035,
+        "majorGcTime": 0,
+        "gcAmount": 1193.912,
+        "renderTime": 0.09300000010989606
+      }
+    },
+    {
+      "runIndex": 53,
+      "timeStamp": "2015-08-28T07:20:51.050Z",
+      "values": {
+        "scriptTime": 0.2739999999757856,
+        "pureScriptTime": 0.2739999999757856,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.24100000015459955
+      }
+    },
+    {
+      "runIndex": 54,
+      "timeStamp": "2015-08-28T07:20:51.101Z",
+      "values": {
+        "scriptTime": 21.418999999994412,
+        "pureScriptTime": 17.567000000271946,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 7.522999999579042
+      }
+    },
+    {
+      "runIndex": 55,
+      "timeStamp": "2015-08-28T07:20:51.129Z",
+      "values": {
+        "scriptTime": 5.477999999886379,
+        "pureScriptTime": 5.477999999886379,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.21800000010989606
+      }
+    },
+    {
+      "runIndex": 56,
+      "timeStamp": "2015-08-28T07:20:51.155Z",
+      "values": {
+        "scriptTime": 5.55600000009872,
+        "pureScriptTime": 5.55600000009872,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.24900000006891787
+      }
+    },
+    {
+      "runIndex": 57,
+      "timeStamp": "2015-08-28T07:20:51.182Z",
+      "values": {
+        "scriptTime": 5.402000000001863,
+        "pureScriptTime": 5.402000000001863,
+        "gcTime": 0.325999999884516,
+        "majorGcTime": 0,
+        "gcAmount": 1647.096,
+        "renderTime": 0.22699999995529652
+      }
+    },
+    {
+      "runIndex": 58,
+      "timeStamp": "2015-08-28T07:20:51.237Z",
+      "values": {
+        "scriptTime": 19.364999999990687,
+        "pureScriptTime": 15.392999999690801,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 7.283000000286847
+      }
+    },
+    {
+      "runIndex": 59,
+      "timeStamp": "2015-08-28T07:20:51.265Z",
+      "values": {
+        "scriptTime": 5.53000000002794,
+        "pureScriptTime": 5.53000000002794,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.23300000000745058
+      }
+    },
+    {
+      "runIndex": 60,
+      "timeStamp": "2015-08-28T07:20:51.293Z",
+      "values": {
+        "scriptTime": 5.239999999990687,
+        "pureScriptTime": 5.239999999990687,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.24399999994784594
+      }
+    },
+    {
+      "runIndex": 61,
+      "timeStamp": "2015-08-28T07:20:51.318Z",
+      "values": {
+        "scriptTime": 5.4799999999813735,
+        "pureScriptTime": 5.4799999999813735,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.24800000013783574
+      }
+    },
+    {
+      "runIndex": 62,
+      "timeStamp": "2015-08-28T07:20:51.369Z",
+      "values": {
+        "scriptTime": 20.82799999997951,
+        "pureScriptTime": 17.05600000056438,
+        "gcTime": 0.3349999999627471,
+        "majorGcTime": 0,
+        "gcAmount": 1654.952,
+        "renderTime": 7.066999999340624
+      }
+    },
+    {
+      "runIndex": 63,
+      "timeStamp": "2015-08-28T07:20:51.397Z",
+      "values": {
+        "scriptTime": 6.042000000132248,
+        "pureScriptTime": 6.042000000132248,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2099999999627471
+      }
+    },
+    {
+      "runIndex": 64,
+      "timeStamp": "2015-08-28T07:20:51.427Z",
+      "values": {
+        "scriptTime": 5.69800000009127,
+        "pureScriptTime": 5.69800000009127,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.22900000005029142
+      }
+    },
+    {
+      "runIndex": 65,
+      "timeStamp": "2015-08-28T07:20:51.451Z",
+      "values": {
+        "scriptTime": 5.376000000163913,
+        "pureScriptTime": 5.376000000163913,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.29099999996833503
+      }
+    },
+    {
+      "runIndex": 66,
+      "timeStamp": "2015-08-28T07:20:51.504Z",
+      "values": {
+        "scriptTime": 20.40100000007078,
+        "pureScriptTime": 16.64700000011362,
+        "gcTime": 0.29899999988265336,
+        "majorGcTime": 0,
+        "gcAmount": 1444.816,
+        "renderTime": 6.912999999942258
+      }
+    },
+    {
+      "runIndex": 67,
+      "timeStamp": "2015-08-28T07:20:51.533Z",
+      "values": {
+        "scriptTime": 5.622999999905005,
+        "pureScriptTime": 5.622999999905005,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.35000000009313226
+      }
+    },
+    {
+      "runIndex": 68,
+      "timeStamp": "2015-08-28T07:20:51.569Z",
+      "values": {
+        "scriptTime": 5.199999999953434,
+        "pureScriptTime": 5.199999999953434,
+        "gcTime": 0.32499999995343387,
+        "majorGcTime": 0,
+        "gcAmount": 994.584,
+        "renderTime": 0.22899999981746078
+      }
+    },
+    {
+      "runIndex": 69,
+      "timeStamp": "2015-08-28T07:20:51.606Z",
+      "values": {
+        "scriptTime": 5.884000000078231,
+        "pureScriptTime": 5.884000000078231,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2339999999385327
+      }
+    },
+    {
+      "runIndex": 70,
+      "timeStamp": "2015-08-28T07:20:51.664Z",
+      "values": {
+        "scriptTime": 20.64199999999255,
+        "pureScriptTime": 16.808999999891967,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 7.101000000024214
+      }
+    },
+    {
+      "runIndex": 71,
+      "timeStamp": "2015-08-28T07:20:51.698Z",
+      "values": {
+        "scriptTime": 5.7649999998975545,
+        "pureScriptTime": 5.7649999998975545,
+        "gcTime": 0.34799999999813735,
+        "majorGcTime": 0,
+        "gcAmount": 1227.616,
+        "renderTime": 0.31200000015087426
+      }
+    },
+    {
+      "runIndex": 72,
+      "timeStamp": "2015-08-28T07:20:51.744Z",
+      "values": {
+        "scriptTime": 5.356000000145286,
+        "pureScriptTime": 5.356000000145286,
+        "gcTime": 0.4749999998603016,
+        "majorGcTime": 0,
+        "gcAmount": 454.03999999999996,
+        "renderTime": 0.23900000005960464
+      }
+    },
+    {
+      "runIndex": 73,
+      "timeStamp": "2015-08-28T07:20:51.770Z",
+      "values": {
+        "scriptTime": 5.43100000009872,
+        "pureScriptTime": 5.43100000009872,
+        "gcTime": 0.15500000002793968,
+        "majorGcTime": 0,
+        "gcAmount": 6.144,
+        "renderTime": 0.20900000003166497
+      }
+    },
+    {
+      "runIndex": 74,
+      "timeStamp": "2015-08-28T07:20:51.822Z",
+      "values": {
+        "scriptTime": 22.005000000121072,
+        "pureScriptTime": 18.104000000283122,
+        "gcTime": 0.24900000006891787,
+        "majorGcTime": 0,
+        "gcAmount": 229.072,
+        "renderTime": 7.205000000074506
+      }
+    },
+    {
+      "runIndex": 75,
+      "timeStamp": "2015-08-28T07:20:51.847Z",
+      "values": {
+        "scriptTime": 5.644000000087544,
+        "pureScriptTime": 5.457000000169501,
+        "gcTime": 0.1869999999180436,
+        "majorGcTime": 0,
+        "gcAmount": 977.952,
+        "renderTime": 0.22299999999813735
+      }
+    },
+    {
+      "runIndex": 76,
+      "timeStamp": "2015-08-28T07:20:51.875Z",
+      "values": {
+        "scriptTime": 5.442999999970198,
+        "pureScriptTime": 5.442999999970198,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.21799999987706542
+      }
+    },
+    {
+      "runIndex": 77,
+      "timeStamp": "2015-08-28T07:20:51.900Z",
+      "values": {
+        "scriptTime": 5.249000000068918,
+        "pureScriptTime": 5.249000000068918,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2979999999515712
+      }
+    },
+    {
+      "runIndex": 78,
+      "timeStamp": "2015-08-28T07:20:51.955Z",
+      "values": {
+        "scriptTime": 19.308999999891967,
+        "pureScriptTime": 15.596999999834225,
+        "gcTime": 0.21600000001490116,
+        "majorGcTime": 0,
+        "gcAmount": 493.168,
+        "renderTime": 7.145999999949709
+      }
+    },
+    {
+      "runIndex": 79,
+      "timeStamp": "2015-08-28T07:20:51.983Z",
+      "values": {
+        "scriptTime": 5.708999999798834,
+        "pureScriptTime": 5.708999999798834,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.24699999997392297
+      }
+    },
+    {
+      "runIndex": 80,
+      "timeStamp": "2015-08-28T07:20:52.009Z",
+      "values": {
+        "scriptTime": 5.730999999912456,
+        "pureScriptTime": 5.730999999912456,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.43299999996088445
+      }
+    },
+    {
+      "runIndex": 81,
+      "timeStamp": "2015-08-28T07:20:52.039Z",
+      "values": {
+        "scriptTime": 6.428000000072643,
+        "pureScriptTime": 6.428000000072643,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2660000000614673
+      }
+    },
+    {
+      "runIndex": 82,
+      "timeStamp": "2015-08-28T07:20:52.096Z",
+      "values": {
+        "scriptTime": 21.213999999919906,
+        "pureScriptTime": 17.42599999997765,
+        "gcTime": 0.24699999997392297,
+        "majorGcTime": 0,
+        "gcAmount": 1477.936,
+        "renderTime": 6.877999999793246
+      }
+    },
+    {
+      "runIndex": 83,
+      "timeStamp": "2015-08-28T07:20:52.122Z",
+      "values": {
+        "scriptTime": 5.75,
+        "pureScriptTime": 5.75,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2319999998435378
+      }
+    },
+    {
+      "runIndex": 84,
+      "timeStamp": "2015-08-28T07:20:52.151Z",
+      "values": {
+        "scriptTime": 6.087999999988824,
+        "pureScriptTime": 6.087999999988824,
+        "gcTime": 0.24600000004284084,
+        "majorGcTime": 0,
+        "gcAmount": 1018.584,
+        "renderTime": 0.2549999998882413
+      }
+    },
+    {
+      "runIndex": 85,
+      "timeStamp": "2015-08-28T07:20:52.177Z",
+      "values": {
+        "scriptTime": 5.662000000011176,
+        "pureScriptTime": 5.662000000011176,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.22999999998137355
+      }
+    },
+    {
+      "runIndex": 86,
+      "timeStamp": "2015-08-28T07:20:52.233Z",
+      "values": {
+        "scriptTime": 24.679999999934807,
+        "pureScriptTime": 18.17299999995157,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 9.979999999981374
+      }
+    },
+    {
+      "runIndex": 87,
+      "timeStamp": "2015-08-28T07:20:52.259Z",
+      "values": {
+        "scriptTime": 6.415999999968335,
+        "pureScriptTime": 6.415999999968335,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2280000001192093
+      }
+    },
+    {
+      "runIndex": 88,
+      "timeStamp": "2015-08-28T07:20:52.294Z",
+      "values": {
+        "scriptTime": 5.540999999968335,
+        "pureScriptTime": 5.540999999968335,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2360000000335276
+      }
+    },
+    {
+      "runIndex": 89,
+      "timeStamp": "2015-08-28T07:20:52.321Z",
+      "values": {
+        "scriptTime": 6.1779999998398125,
+        "pureScriptTime": 6.1779999998398125,
+        "gcTime": 0.33899999991990626,
+        "majorGcTime": 0,
+        "gcAmount": 1752.696,
+        "renderTime": 0.25099999993108213
+      }
+    },
+    {
+      "runIndex": 90,
+      "timeStamp": "2015-08-28T07:20:52.348Z",
+      "values": {
+        "scriptTime": 6.085999999893829,
+        "pureScriptTime": 6.085999999893829,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.26300000003539026
+      }
+    },
+    {
+      "runIndex": 91,
+      "timeStamp": "2015-08-28T07:20:52.398Z",
+      "values": {
+        "scriptTime": 19.726000000024214,
+        "pureScriptTime": 15.875,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 7.024000000208616
+      }
+    },
+    {
+      "runIndex": 92,
+      "timeStamp": "2015-08-28T07:20:52.426Z",
+      "values": {
+        "scriptTime": 5.8489999999292195,
+        "pureScriptTime": 5.8489999999292195,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.21600000001490116
+      }
+    },
+    {
+      "runIndex": 93,
+      "timeStamp": "2015-08-28T07:20:52.460Z",
+      "values": {
+        "scriptTime": 5.794999999925494,
+        "pureScriptTime": 5.794999999925494,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.23999999975785613
+      }
+    },
+    {
+      "runIndex": 94,
+      "timeStamp": "2015-08-28T07:20:52.489Z",
+      "values": {
+        "scriptTime": 8.874000000068918,
+        "pureScriptTime": 8.489000000059605,
+        "gcTime": 0.3850000000093132,
+        "majorGcTime": 0,
+        "gcAmount": 1922.168,
+        "renderTime": 0.2569999999832362
+      }
+    },
+    {
+      "runIndex": 95,
+      "timeStamp": "2015-08-28T07:20:52.517Z",
+      "values": {
+        "scriptTime": 5.950999999884516,
+        "pureScriptTime": 5.950999999884516,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.25099999993108213
+      }
+    },
+    {
+      "runIndex": 96,
+      "timeStamp": "2015-08-28T07:20:52.568Z",
+      "values": {
+        "scriptTime": 20.82300000009127,
+        "pureScriptTime": 16.976000000257045,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 7.146999999880791
+      }
+    },
+    {
+      "runIndex": 97,
+      "timeStamp": "2015-08-28T07:20:52.601Z",
+      "values": {
+        "scriptTime": 7.644000000087544,
+        "pureScriptTime": 7.644000000087544,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.23800000012852252
+      }
+    },
+    {
+      "runIndex": 98,
+      "timeStamp": "2015-08-28T07:20:52.634Z",
+      "values": {
+        "scriptTime": 5.574999999953434,
+        "pureScriptTime": 5.574999999953434,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.24200000008568168
+      }
+    },
+    {
+      "runIndex": 99,
+      "timeStamp": "2015-08-28T07:20:52.660Z",
+      "values": {
+        "scriptTime": 6.106999999843538,
+        "pureScriptTime": 6.106999999843538,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.24899999983608723
+      }
+    },
+    {
+      "runIndex": 100,
+      "timeStamp": "2015-08-28T07:20:52.688Z",
+      "values": {
+        "scriptTime": 6.16399999987334,
+        "pureScriptTime": 6.16399999987334,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.23099999991245568
+      }
+    },
+    {
+      "runIndex": 101,
+      "timeStamp": "2015-08-28T07:20:52.741Z",
+      "values": {
+        "scriptTime": 22.10800000000745,
+        "pureScriptTime": 17.546000000089407,
+        "gcTime": 0.25600000005215406,
+        "majorGcTime": 0,
+        "gcAmount": 974.12,
+        "renderTime": 8.287999999709427
+      }
+    },
+    {
+      "runIndex": 102,
+      "timeStamp": "2015-08-28T07:20:52.768Z",
+      "values": {
+        "scriptTime": 6.707999999867752,
+        "pureScriptTime": 6.707999999867752,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.25
+      }
+    }
+  ],
+  "validSample": [
+    {
+      "runIndex": 3,
+      "timeStamp": "2015-08-28T07:20:49.319Z",
+      "values": {
+        "scriptTime": 5.125,
+        "pureScriptTime": 5.054000000003725,
+        "gcTime": 0.5780000002123415,
+        "majorGcTime": 0,
+        "gcAmount": 710.224,
+        "renderTime": 0.31499999994412065
+      }
+    },
+    {
+      "runIndex": 4,
+      "timeStamp": "2015-08-28T07:20:49.367Z",
+      "values": {
+        "scriptTime": 7.622999999905005,
+        "pureScriptTime": 7.561999999918044,
+        "gcTime": 0.1270000000949949,
+        "majorGcTime": 0,
+        "gcAmount": 185.04,
+        "renderTime": 0.3279999999795109
+      }
+    },
+    {
+      "runIndex": 5,
+      "timeStamp": "2015-08-28T07:20:49.391Z",
+      "values": {
+        "scriptTime": 4.28000000002794,
+        "pureScriptTime": 4.221000000135973,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.28199999989010394
+      }
+    },
+    {
+      "runIndex": 6,
+      "timeStamp": "2015-08-28T07:20:49.443Z",
+      "values": {
+        "scriptTime": 19.631999999983236,
+        "pureScriptTime": 16.0429999998305,
+        "gcTime": 0.14799999981187284,
+        "majorGcTime": 0,
+        "gcAmount": 186.104,
+        "renderTime": 6.747000000206754
+      }
+    },
+    {
+      "runIndex": 7,
+      "timeStamp": "2015-08-28T07:20:49.469Z",
+      "values": {
+        "scriptTime": 4.327000000048429,
+        "pureScriptTime": 4.327000000048429,
+        "gcTime": 0.1869999999180436,
+        "majorGcTime": 0,
+        "gcAmount": 715.528,
+        "renderTime": 0.3380000002216548
+      }
+    },
+    {
+      "runIndex": 8,
+      "timeStamp": "2015-08-28T07:20:49.503Z",
+      "values": {
+        "scriptTime": 4.8600000001024455,
+        "pureScriptTime": 4.8600000001024455,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.30500000016763806
+      }
+    },
+    {
+      "runIndex": 9,
+      "timeStamp": "2015-08-28T07:20:49.528Z",
+      "values": {
+        "scriptTime": 5.3140000000130385,
+        "pureScriptTime": 5.3140000000130385,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.23700000019744039
+      }
+    },
+    {
+      "runIndex": 10,
+      "timeStamp": "2015-08-28T07:20:49.576Z",
+      "values": {
+        "scriptTime": 19.292000000132248,
+        "pureScriptTime": 15.395000000251457,
+        "gcTime": 0.17599999997764826,
+        "majorGcTime": 0,
+        "gcAmount": 961.648,
+        "renderTime": 6.359999999869615
+      }
+    },
+    {
+      "runIndex": 11,
+      "timeStamp": "2015-08-28T07:20:49.604Z",
+      "values": {
+        "scriptTime": 4.527999999932945,
+        "pureScriptTime": 4.527999999932945,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.23200000007636845
+      }
+    },
+    {
+      "runIndex": 12,
+      "timeStamp": "2015-08-28T07:20:49.630Z",
+      "values": {
+        "scriptTime": 4.966999999945983,
+        "pureScriptTime": 4.966999999945983,
+        "gcTime": 0.18200000002980232,
+        "majorGcTime": 0,
+        "gcAmount": 537.352,
+        "renderTime": 0.23900000005960464
+      }
+    },
+    {
+      "runIndex": 13,
+      "timeStamp": "2015-08-28T07:20:49.662Z",
+      "values": {
+        "scriptTime": 4.533999999985099,
+        "pureScriptTime": 4.533999999985099,
+        "gcTime": 0.15200000000186265,
+        "majorGcTime": 0,
+        "gcAmount": 395.808,
+        "renderTime": 0.2959999998565763
+      }
+    },
+    {
+      "runIndex": 14,
+      "timeStamp": "2015-08-28T07:20:49.712Z",
+      "values": {
+        "scriptTime": 19.252000000094995,
+        "pureScriptTime": 15.649000000208616,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 6.543999999994412
+      }
+    },
+    {
+      "runIndex": 15,
+      "timeStamp": "2015-08-28T07:20:49.739Z",
+      "values": {
+        "scriptTime": 5.506999999983236,
+        "pureScriptTime": 5.506999999983236,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.23100000014528632
+      }
+    },
+    {
+      "runIndex": 16,
+      "timeStamp": "2015-08-28T07:20:49.766Z",
+      "values": {
+        "scriptTime": 4.622999999905005,
+        "pureScriptTime": 4.622999999905005,
+        "gcTime": 0.17999999993480742,
+        "majorGcTime": 0,
+        "gcAmount": 920.656,
+        "renderTime": 0.2529999997932464
+      }
+    },
+    {
+      "runIndex": 17,
+      "timeStamp": "2015-08-28T07:20:49.860Z",
+      "values": {
+        "scriptTime": 4.859999999869615,
+        "pureScriptTime": 4.859999999869615,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2789999998640269
+      }
+    },
+    {
+      "runIndex": 18,
+      "timeStamp": "2015-08-28T07:20:49.908Z",
+      "values": {
+        "scriptTime": 18.402999999932945,
+        "pureScriptTime": 14.731999999843538,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 6.565999999875203
+      }
+    },
+    {
+      "runIndex": 19,
+      "timeStamp": "2015-08-28T07:20:49.934Z",
+      "values": {
+        "scriptTime": 5.111000000033528,
+        "pureScriptTime": 5.111000000033528,
+        "gcTime": 0.3320000001695007,
+        "majorGcTime": 0,
+        "gcAmount": 713.264,
+        "renderTime": 0.24400000018067658
+      }
+    },
+    {
+      "runIndex": 20,
+      "timeStamp": "2015-08-28T07:20:49.960Z",
+      "values": {
+        "scriptTime": 5.33199999993667,
+        "pureScriptTime": 5.33199999993667,
+        "gcTime": 0.16600000020116568,
+        "majorGcTime": 0,
+        "gcAmount": 201.984,
+        "renderTime": 0.22700000018812716
+      }
+    },
+    {
+      "runIndex": 21,
+      "timeStamp": "2015-08-28T07:20:49.988Z",
+      "values": {
+        "scriptTime": 4.952999999979511,
+        "pureScriptTime": 4.952999999979511,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.23300000000745058
+      }
+    },
+    {
+      "runIndex": 22,
+      "timeStamp": "2015-08-28T07:20:50.038Z",
+      "values": {
+        "scriptTime": 18.851999999955297,
+        "pureScriptTime": 14.959000000031665,
+        "gcTime": 0.1559999999590218,
+        "majorGcTime": 0,
+        "gcAmount": 408.944,
+        "renderTime": 6.8439999998081475
+      }
+    },
+    {
+      "runIndex": 23,
+      "timeStamp": "2015-08-28T07:20:50.067Z",
+      "values": {
+        "scriptTime": 4.671000000089407,
+        "pureScriptTime": 4.671000000089407,
+        "gcTime": 0.21099999989382923,
+        "majorGcTime": 0,
+        "gcAmount": 717.968,
+        "renderTime": 0.20399999991059303
+      }
+    },
+    {
+      "runIndex": 24,
+      "timeStamp": "2015-08-28T07:20:50.093Z",
+      "values": {
+        "scriptTime": 4.824000000022352,
+        "pureScriptTime": 4.824000000022352,
+        "gcTime": 0.18900000001303852,
+        "majorGcTime": 0,
+        "gcAmount": 204.08,
+        "renderTime": 0.25199999986216426
+      }
+    },
+    {
+      "runIndex": 25,
+      "timeStamp": "2015-08-28T07:20:50.118Z",
+      "values": {
+        "scriptTime": 4.396000000182539,
+        "pureScriptTime": 4.396000000182539,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.21799999987706542
+      }
+    },
+    {
+      "runIndex": 26,
+      "timeStamp": "2015-08-28T07:20:50.169Z",
+      "values": {
+        "scriptTime": 18.50400000018999,
+        "pureScriptTime": 14.843000000342727,
+        "gcTime": 0.13100000005215406,
+        "majorGcTime": 0,
+        "gcAmount": 412.6,
+        "renderTime": 7.813000000081956
+      }
+    },
+    {
+      "runIndex": 27,
+      "timeStamp": "2015-08-28T07:20:50.199Z",
+      "values": {
+        "scriptTime": 4.594000000040978,
+        "pureScriptTime": 4.594000000040978,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.20899999979883432
+      }
+    },
+    {
+      "runIndex": 28,
+      "timeStamp": "2015-08-28T07:20:50.228Z",
+      "values": {
+        "scriptTime": 4.780999999959022,
+        "pureScriptTime": 4.59499999997206,
+        "gcTime": 0.18599999998696148,
+        "majorGcTime": 0,
+        "gcAmount": 970.496,
+        "renderTime": 0.4579999998677522
+      }
+    },
+    {
+      "runIndex": 29,
+      "timeStamp": "2015-08-28T07:20:50.253Z",
+      "values": {
+        "scriptTime": 4.760000000009313,
+        "pureScriptTime": 4.760000000009313,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2140000001527369
+      }
+    },
+    {
+      "runIndex": 30,
+      "timeStamp": "2015-08-28T07:20:50.302Z",
+      "values": {
+        "scriptTime": 18.969000000040978,
+        "pureScriptTime": 15.416000000201166,
+        "gcTime": 0.17999999993480742,
+        "majorGcTime": 0,
+        "gcAmount": 372.832,
+        "renderTime": 6.418999999761581
+      }
+    },
+    {
+      "runIndex": 31,
+      "timeStamp": "2015-08-28T07:20:50.326Z",
+      "values": {
+        "scriptTime": 5.122000000206754,
+        "pureScriptTime": 5.122000000206754,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.20900000003166497
+      }
+    },
+    {
+      "runIndex": 32,
+      "timeStamp": "2015-08-28T07:20:50.356Z",
+      "values": {
+        "scriptTime": 4.793999999994412,
+        "pureScriptTime": 4.591999999945983,
+        "gcTime": 0.4170000001322478,
+        "majorGcTime": 0,
+        "gcAmount": 1139.904,
+        "renderTime": 0.3040000000037253
+      }
+    },
+    {
+      "runIndex": 33,
+      "timeStamp": "2015-08-28T07:20:50.387Z",
+      "values": {
+        "scriptTime": 5.041999999899417,
+        "pureScriptTime": 5.041999999899417,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.22500000009313226
+      }
+    },
+    {
+      "runIndex": 34,
+      "timeStamp": "2015-08-28T07:20:50.435Z",
+      "values": {
+        "scriptTime": 18.131000000052154,
+        "pureScriptTime": 14.685999999986961,
+        "gcTime": 0.12599999993108213,
+        "majorGcTime": 0,
+        "gcAmount": 215,
+        "renderTime": 6.3950000000186265
+      }
+    },
+    {
+      "runIndex": 35,
+      "timeStamp": "2015-08-28T07:20:50.463Z",
+      "values": {
+        "scriptTime": 5.307000000029802,
+        "pureScriptTime": 5.307000000029802,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.21399999991990626
+      }
+    },
+    {
+      "runIndex": 36,
+      "timeStamp": "2015-08-28T07:20:50.490Z",
+      "values": {
+        "scriptTime": 5.656999999890104,
+        "pureScriptTime": 5.464999999850988,
+        "gcTime": 0.19200000003911555,
+        "majorGcTime": 0,
+        "gcAmount": 977.28,
+        "renderTime": 0.25
+      }
+    },
+    {
+      "runIndex": 37,
+      "timeStamp": "2015-08-28T07:20:50.515Z",
+      "values": {
+        "scriptTime": 5.561000000219792,
+        "pureScriptTime": 5.561000000219792,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.25
+      }
+    },
+    {
+      "runIndex": 38,
+      "timeStamp": "2015-08-28T07:20:50.571Z",
+      "values": {
+        "scriptTime": 21.432000000029802,
+        "pureScriptTime": 17.21999999973923,
+        "gcTime": 0.13900000019930303,
+        "majorGcTime": 0,
+        "gcAmount": 211.128,
+        "renderTime": 7.388000000268221
+      }
+    },
+    {
+      "runIndex": 39,
+      "timeStamp": "2015-08-28T07:20:50.596Z",
+      "values": {
+        "scriptTime": 4.962999999988824,
+        "pureScriptTime": 4.962999999988824,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.19999999995343387
+      }
+    },
+    {
+      "runIndex": 40,
+      "timeStamp": "2015-08-28T07:20:50.624Z",
+      "values": {
+        "scriptTime": 5.702999999979511,
+        "pureScriptTime": 5.472999999998137,
+        "gcTime": 0.22999999998137355,
+        "majorGcTime": 0,
+        "gcAmount": 982.84,
+        "renderTime": 0.24600000004284084
+      }
+    },
+    {
+      "runIndex": 41,
+      "timeStamp": "2015-08-28T07:20:50.650Z",
+      "values": {
+        "scriptTime": 4.789999999804422,
+        "pureScriptTime": 4.789999999804422,
+        "gcTime": 0.2339999999385327,
+        "majorGcTime": 0,
+        "gcAmount": 174.536,
+        "renderTime": 0.2779999999329448
+      }
+    },
+    {
+      "runIndex": 42,
+      "timeStamp": "2015-08-28T07:20:50.705Z",
+      "values": {
+        "scriptTime": 23.06000000005588,
+        "pureScriptTime": 18.246999999741092,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 8.365000000223517
+      }
+    },
+    {
+      "runIndex": 43,
+      "timeStamp": "2015-08-28T07:20:50.733Z",
+      "values": {
+        "scriptTime": 5.117000000085682,
+        "pureScriptTime": 5.117000000085682,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.22099999990314245
+      }
+    },
+    {
+      "runIndex": 44,
+      "timeStamp": "2015-08-28T07:20:50.758Z",
+      "values": {
+        "scriptTime": 5.054999999934807,
+        "pureScriptTime": 5.054999999934807,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2690000000875443
+      }
+    },
+    {
+      "runIndex": 45,
+      "timeStamp": "2015-08-28T07:20:50.786Z",
+      "values": {
+        "scriptTime": 4.84900000016205,
+        "pureScriptTime": 4.84900000016205,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2260000000242144
+      }
+    },
+    {
+      "runIndex": 46,
+      "timeStamp": "2015-08-28T07:20:50.834Z",
+      "values": {
+        "scriptTime": 17.912000000011176,
+        "pureScriptTime": 14.258000000147149,
+        "gcTime": 0.23700000019744039,
+        "majorGcTime": 0,
+        "gcAmount": 1618.672,
+        "renderTime": 6.898999999975786
+      }
+    },
+    {
+      "runIndex": 47,
+      "timeStamp": "2015-08-28T07:20:50.860Z",
+      "values": {
+        "scriptTime": 5.6100000001024455,
+        "pureScriptTime": 5.6100000001024455,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.26799999992363155
+      }
+    },
+    {
+      "runIndex": 48,
+      "timeStamp": "2015-08-28T07:20:50.892Z",
+      "values": {
+        "scriptTime": 5.503999999957159,
+        "pureScriptTime": 5.503999999957159,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.27900000009685755
+      }
+    },
+    {
+      "runIndex": 49,
+      "timeStamp": "2015-08-28T07:20:50.916Z",
+      "values": {
+        "scriptTime": 4.719000000040978,
+        "pureScriptTime": 4.719000000040978,
+        "gcTime": 0.39700000011362135,
+        "majorGcTime": 0,
+        "gcAmount": 1186.896,
+        "renderTime": 0.19999999995343387
+      }
+    },
+    {
+      "runIndex": 50,
+      "timeStamp": "2015-08-28T07:20:50.965Z",
+      "values": {
+        "scriptTime": 19.391000000061467,
+        "pureScriptTime": 15.604999999981374,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 7.0690000001341105
+      }
+    },
+    {
+      "runIndex": 51,
+      "timeStamp": "2015-08-28T07:20:50.990Z",
+      "values": {
+        "scriptTime": 5.721999999834225,
+        "pureScriptTime": 5.721999999834225,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2820000001229346
+      }
+    },
+    {
+      "runIndex": 52,
+      "timeStamp": "2015-08-28T07:20:51.014Z",
+      "values": {
+        "scriptTime": 0.34799999999813735,
+        "pureScriptTime": 0.34799999999813735,
+        "gcTime": 0.3980000000447035,
+        "majorGcTime": 0,
+        "gcAmount": 1193.912,
+        "renderTime": 0.09300000010989606
+      }
+    },
+    {
+      "runIndex": 53,
+      "timeStamp": "2015-08-28T07:20:51.050Z",
+      "values": {
+        "scriptTime": 0.2739999999757856,
+        "pureScriptTime": 0.2739999999757856,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.24100000015459955
+      }
+    },
+    {
+      "runIndex": 54,
+      "timeStamp": "2015-08-28T07:20:51.101Z",
+      "values": {
+        "scriptTime": 21.418999999994412,
+        "pureScriptTime": 17.567000000271946,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 7.522999999579042
+      }
+    },
+    {
+      "runIndex": 55,
+      "timeStamp": "2015-08-28T07:20:51.129Z",
+      "values": {
+        "scriptTime": 5.477999999886379,
+        "pureScriptTime": 5.477999999886379,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.21800000010989606
+      }
+    },
+    {
+      "runIndex": 56,
+      "timeStamp": "2015-08-28T07:20:51.155Z",
+      "values": {
+        "scriptTime": 5.55600000009872,
+        "pureScriptTime": 5.55600000009872,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.24900000006891787
+      }
+    },
+    {
+      "runIndex": 57,
+      "timeStamp": "2015-08-28T07:20:51.182Z",
+      "values": {
+        "scriptTime": 5.402000000001863,
+        "pureScriptTime": 5.402000000001863,
+        "gcTime": 0.325999999884516,
+        "majorGcTime": 0,
+        "gcAmount": 1647.096,
+        "renderTime": 0.22699999995529652
+      }
+    },
+    {
+      "runIndex": 58,
+      "timeStamp": "2015-08-28T07:20:51.237Z",
+      "values": {
+        "scriptTime": 19.364999999990687,
+        "pureScriptTime": 15.392999999690801,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 7.283000000286847
+      }
+    },
+    {
+      "runIndex": 59,
+      "timeStamp": "2015-08-28T07:20:51.265Z",
+      "values": {
+        "scriptTime": 5.53000000002794,
+        "pureScriptTime": 5.53000000002794,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.23300000000745058
+      }
+    },
+    {
+      "runIndex": 60,
+      "timeStamp": "2015-08-28T07:20:51.293Z",
+      "values": {
+        "scriptTime": 5.239999999990687,
+        "pureScriptTime": 5.239999999990687,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.24399999994784594
+      }
+    },
+    {
+      "runIndex": 61,
+      "timeStamp": "2015-08-28T07:20:51.318Z",
+      "values": {
+        "scriptTime": 5.4799999999813735,
+        "pureScriptTime": 5.4799999999813735,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.24800000013783574
+      }
+    },
+    {
+      "runIndex": 62,
+      "timeStamp": "2015-08-28T07:20:51.369Z",
+      "values": {
+        "scriptTime": 20.82799999997951,
+        "pureScriptTime": 17.05600000056438,
+        "gcTime": 0.3349999999627471,
+        "majorGcTime": 0,
+        "gcAmount": 1654.952,
+        "renderTime": 7.066999999340624
+      }
+    },
+    {
+      "runIndex": 63,
+      "timeStamp": "2015-08-28T07:20:51.397Z",
+      "values": {
+        "scriptTime": 6.042000000132248,
+        "pureScriptTime": 6.042000000132248,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2099999999627471
+      }
+    },
+    {
+      "runIndex": 64,
+      "timeStamp": "2015-08-28T07:20:51.427Z",
+      "values": {
+        "scriptTime": 5.69800000009127,
+        "pureScriptTime": 5.69800000009127,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.22900000005029142
+      }
+    },
+    {
+      "runIndex": 65,
+      "timeStamp": "2015-08-28T07:20:51.451Z",
+      "values": {
+        "scriptTime": 5.376000000163913,
+        "pureScriptTime": 5.376000000163913,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.29099999996833503
+      }
+    },
+    {
+      "runIndex": 66,
+      "timeStamp": "2015-08-28T07:20:51.504Z",
+      "values": {
+        "scriptTime": 20.40100000007078,
+        "pureScriptTime": 16.64700000011362,
+        "gcTime": 0.29899999988265336,
+        "majorGcTime": 0,
+        "gcAmount": 1444.816,
+        "renderTime": 6.912999999942258
+      }
+    },
+    {
+      "runIndex": 67,
+      "timeStamp": "2015-08-28T07:20:51.533Z",
+      "values": {
+        "scriptTime": 5.622999999905005,
+        "pureScriptTime": 5.622999999905005,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.35000000009313226
+      }
+    },
+    {
+      "runIndex": 68,
+      "timeStamp": "2015-08-28T07:20:51.569Z",
+      "values": {
+        "scriptTime": 5.199999999953434,
+        "pureScriptTime": 5.199999999953434,
+        "gcTime": 0.32499999995343387,
+        "majorGcTime": 0,
+        "gcAmount": 994.584,
+        "renderTime": 0.22899999981746078
+      }
+    },
+    {
+      "runIndex": 69,
+      "timeStamp": "2015-08-28T07:20:51.606Z",
+      "values": {
+        "scriptTime": 5.884000000078231,
+        "pureScriptTime": 5.884000000078231,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2339999999385327
+      }
+    },
+    {
+      "runIndex": 70,
+      "timeStamp": "2015-08-28T07:20:51.664Z",
+      "values": {
+        "scriptTime": 20.64199999999255,
+        "pureScriptTime": 16.808999999891967,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 7.101000000024214
+      }
+    },
+    {
+      "runIndex": 71,
+      "timeStamp": "2015-08-28T07:20:51.698Z",
+      "values": {
+        "scriptTime": 5.7649999998975545,
+        "pureScriptTime": 5.7649999998975545,
+        "gcTime": 0.34799999999813735,
+        "majorGcTime": 0,
+        "gcAmount": 1227.616,
+        "renderTime": 0.31200000015087426
+      }
+    },
+    {
+      "runIndex": 72,
+      "timeStamp": "2015-08-28T07:20:51.744Z",
+      "values": {
+        "scriptTime": 5.356000000145286,
+        "pureScriptTime": 5.356000000145286,
+        "gcTime": 0.4749999998603016,
+        "majorGcTime": 0,
+        "gcAmount": 454.03999999999996,
+        "renderTime": 0.23900000005960464
+      }
+    },
+    {
+      "runIndex": 73,
+      "timeStamp": "2015-08-28T07:20:51.770Z",
+      "values": {
+        "scriptTime": 5.43100000009872,
+        "pureScriptTime": 5.43100000009872,
+        "gcTime": 0.15500000002793968,
+        "majorGcTime": 0,
+        "gcAmount": 6.144,
+        "renderTime": 0.20900000003166497
+      }
+    },
+    {
+      "runIndex": 74,
+      "timeStamp": "2015-08-28T07:20:51.822Z",
+      "values": {
+        "scriptTime": 22.005000000121072,
+        "pureScriptTime": 18.104000000283122,
+        "gcTime": 0.24900000006891787,
+        "majorGcTime": 0,
+        "gcAmount": 229.072,
+        "renderTime": 7.205000000074506
+      }
+    },
+    {
+      "runIndex": 75,
+      "timeStamp": "2015-08-28T07:20:51.847Z",
+      "values": {
+        "scriptTime": 5.644000000087544,
+        "pureScriptTime": 5.457000000169501,
+        "gcTime": 0.1869999999180436,
+        "majorGcTime": 0,
+        "gcAmount": 977.952,
+        "renderTime": 0.22299999999813735
+      }
+    },
+    {
+      "runIndex": 76,
+      "timeStamp": "2015-08-28T07:20:51.875Z",
+      "values": {
+        "scriptTime": 5.442999999970198,
+        "pureScriptTime": 5.442999999970198,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.21799999987706542
+      }
+    },
+    {
+      "runIndex": 77,
+      "timeStamp": "2015-08-28T07:20:51.900Z",
+      "values": {
+        "scriptTime": 5.249000000068918,
+        "pureScriptTime": 5.249000000068918,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2979999999515712
+      }
+    },
+    {
+      "runIndex": 78,
+      "timeStamp": "2015-08-28T07:20:51.955Z",
+      "values": {
+        "scriptTime": 19.308999999891967,
+        "pureScriptTime": 15.596999999834225,
+        "gcTime": 0.21600000001490116,
+        "majorGcTime": 0,
+        "gcAmount": 493.168,
+        "renderTime": 7.145999999949709
+      }
+    },
+    {
+      "runIndex": 79,
+      "timeStamp": "2015-08-28T07:20:51.983Z",
+      "values": {
+        "scriptTime": 5.708999999798834,
+        "pureScriptTime": 5.708999999798834,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.24699999997392297
+      }
+    },
+    {
+      "runIndex": 80,
+      "timeStamp": "2015-08-28T07:20:52.009Z",
+      "values": {
+        "scriptTime": 5.730999999912456,
+        "pureScriptTime": 5.730999999912456,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.43299999996088445
+      }
+    },
+    {
+      "runIndex": 81,
+      "timeStamp": "2015-08-28T07:20:52.039Z",
+      "values": {
+        "scriptTime": 6.428000000072643,
+        "pureScriptTime": 6.428000000072643,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2660000000614673
+      }
+    },
+    {
+      "runIndex": 82,
+      "timeStamp": "2015-08-28T07:20:52.096Z",
+      "values": {
+        "scriptTime": 21.213999999919906,
+        "pureScriptTime": 17.42599999997765,
+        "gcTime": 0.24699999997392297,
+        "majorGcTime": 0,
+        "gcAmount": 1477.936,
+        "renderTime": 6.877999999793246
+      }
+    },
+    {
+      "runIndex": 83,
+      "timeStamp": "2015-08-28T07:20:52.122Z",
+      "values": {
+        "scriptTime": 5.75,
+        "pureScriptTime": 5.75,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2319999998435378
+      }
+    },
+    {
+      "runIndex": 84,
+      "timeStamp": "2015-08-28T07:20:52.151Z",
+      "values": {
+        "scriptTime": 6.087999999988824,
+        "pureScriptTime": 6.087999999988824,
+        "gcTime": 0.24600000004284084,
+        "majorGcTime": 0,
+        "gcAmount": 1018.584,
+        "renderTime": 0.2549999998882413
+      }
+    },
+    {
+      "runIndex": 85,
+      "timeStamp": "2015-08-28T07:20:52.177Z",
+      "values": {
+        "scriptTime": 5.662000000011176,
+        "pureScriptTime": 5.662000000011176,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.22999999998137355
+      }
+    },
+    {
+      "runIndex": 86,
+      "timeStamp": "2015-08-28T07:20:52.233Z",
+      "values": {
+        "scriptTime": 24.679999999934807,
+        "pureScriptTime": 18.17299999995157,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 9.979999999981374
+      }
+    },
+    {
+      "runIndex": 87,
+      "timeStamp": "2015-08-28T07:20:52.259Z",
+      "values": {
+        "scriptTime": 6.415999999968335,
+        "pureScriptTime": 6.415999999968335,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2280000001192093
+      }
+    },
+    {
+      "runIndex": 88,
+      "timeStamp": "2015-08-28T07:20:52.294Z",
+      "values": {
+        "scriptTime": 5.540999999968335,
+        "pureScriptTime": 5.540999999968335,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.2360000000335276
+      }
+    },
+    {
+      "runIndex": 89,
+      "timeStamp": "2015-08-28T07:20:52.321Z",
+      "values": {
+        "scriptTime": 6.1779999998398125,
+        "pureScriptTime": 6.1779999998398125,
+        "gcTime": 0.33899999991990626,
+        "majorGcTime": 0,
+        "gcAmount": 1752.696,
+        "renderTime": 0.25099999993108213
+      }
+    },
+    {
+      "runIndex": 90,
+      "timeStamp": "2015-08-28T07:20:52.348Z",
+      "values": {
+        "scriptTime": 6.085999999893829,
+        "pureScriptTime": 6.085999999893829,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.26300000003539026
+      }
+    },
+    {
+      "runIndex": 91,
+      "timeStamp": "2015-08-28T07:20:52.398Z",
+      "values": {
+        "scriptTime": 19.726000000024214,
+        "pureScriptTime": 15.875,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 7.024000000208616
+      }
+    },
+    {
+      "runIndex": 92,
+      "timeStamp": "2015-08-28T07:20:52.426Z",
+      "values": {
+        "scriptTime": 5.8489999999292195,
+        "pureScriptTime": 5.8489999999292195,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.21600000001490116
+      }
+    },
+    {
+      "runIndex": 93,
+      "timeStamp": "2015-08-28T07:20:52.460Z",
+      "values": {
+        "scriptTime": 5.794999999925494,
+        "pureScriptTime": 5.794999999925494,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.23999999975785613
+      }
+    },
+    {
+      "runIndex": 94,
+      "timeStamp": "2015-08-28T07:20:52.489Z",
+      "values": {
+        "scriptTime": 8.874000000068918,
+        "pureScriptTime": 8.489000000059605,
+        "gcTime": 0.3850000000093132,
+        "majorGcTime": 0,
+        "gcAmount": 1922.168,
+        "renderTime": 0.2569999999832362
+      }
+    },
+    {
+      "runIndex": 95,
+      "timeStamp": "2015-08-28T07:20:52.517Z",
+      "values": {
+        "scriptTime": 5.950999999884516,
+        "pureScriptTime": 5.950999999884516,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.25099999993108213
+      }
+    },
+    {
+      "runIndex": 96,
+      "timeStamp": "2015-08-28T07:20:52.568Z",
+      "values": {
+        "scriptTime": 20.82300000009127,
+        "pureScriptTime": 16.976000000257045,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 7.146999999880791
+      }
+    },
+    {
+      "runIndex": 97,
+      "timeStamp": "2015-08-28T07:20:52.601Z",
+      "values": {
+        "scriptTime": 7.644000000087544,
+        "pureScriptTime": 7.644000000087544,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.23800000012852252
+      }
+    },
+    {
+      "runIndex": 98,
+      "timeStamp": "2015-08-28T07:20:52.634Z",
+      "values": {
+        "scriptTime": 5.574999999953434,
+        "pureScriptTime": 5.574999999953434,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.24200000008568168
+      }
+    },
+    {
+      "runIndex": 99,
+      "timeStamp": "2015-08-28T07:20:52.660Z",
+      "values": {
+        "scriptTime": 6.106999999843538,
+        "pureScriptTime": 6.106999999843538,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.24899999983608723
+      }
+    },
+    {
+      "runIndex": 100,
+      "timeStamp": "2015-08-28T07:20:52.688Z",
+      "values": {
+        "scriptTime": 6.16399999987334,
+        "pureScriptTime": 6.16399999987334,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.23099999991245568
+      }
+    },
+    {
+      "runIndex": 101,
+      "timeStamp": "2015-08-28T07:20:52.741Z",
+      "values": {
+        "scriptTime": 22.10800000000745,
+        "pureScriptTime": 17.546000000089407,
+        "gcTime": 0.25600000005215406,
+        "majorGcTime": 0,
+        "gcAmount": 974.12,
+        "renderTime": 8.287999999709427
+      }
+    },
+    {
+      "runIndex": 102,
+      "timeStamp": "2015-08-28T07:20:52.768Z",
+      "values": {
+        "scriptTime": 6.707999999867752,
+        "pureScriptTime": 6.707999999867752,
+        "gcTime": 0,
+        "majorGcTime": 0,
+        "gcAmount": 0,
+        "renderTime": 0.25
+      }
+    }
+  ]
+}
