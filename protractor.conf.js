@@ -1,65 +1,44 @@
+const path = require('path');
 
-require('traceur/bin/traceur-runtime.js');
-require('reflect-metadata');
-
-var benchpress = require('benchpress/benchpress');
-var dirTree = require('dir-tree');
-var fs = require('fs-extra');
-var utils = require('./lib/utils');
-
+const USE_HEADLESS_MODE = false;
 
 exports.config = {
   directConnect: true,
+  chromeDriver: path.resolve('./node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_2.45'),
 
   capabilities: {
     browserName: 'chrome',
     chromeOptions: {
-      // Important for benchpress to get timeline data from the browser
-      'args': ['--js-flags=--expose-gc'],
+      'args': ['--js-flags=--expose-gc', '--window-size=1200,1000', ...(USE_HEADLESS_MODE ? ['--headless', '--disable-gpu'] : []) ],
       'perfLoggingPrefs': {
-        'traceCategories': 'blink.console,disabled-by-default-devtools.timeline'
+        'traceCategories': 'v8,blink.console,devtools.timeline,devtools.timeline.frame'
       },
-      'mobileEmulation': {
-        'deviceMetrics': {
-          'width': 600,
-          'height': 960,
-          'pixelRatio': 1
-        }
-      }
+      // 'mobileEmulation': {
+      //   'deviceMetrics': {
+      //     'width': 600,
+      //     'height': 960,
+      //     'pixelRatio': 1
+      //   }
+      // }
     },
     loggingPrefs: {
       performance: 'ALL',
-      browser: 'ALL'
+      browser: 'ALL',
     }
   },
 
-  specs: ['test/spec/**/*.spec.js'],
+  specs: ['test/config.js', 'test/spec/**/*.spec.js'],
   framework: 'jasmine2',
 
   onPrepare: function() {
-    utils.patchProtractorWait(browser);
-
-    // open a new browser for every benchmark
-    var originalBrowser = browser;
+    patchProtractorWait(browser);
 
     beforeEach(function() {
-      global.browser = originalBrowser.forkNewDriverInstance();
-      utils.patchProtractorWait(global.browser);
-      global.element = global.browser.element;
-      global.$ = global.browser.$;
-      global.$$ = global.browser.$$;
-    });
-    afterEach(function() {
-      global.browser.quit();
-      global.browser = originalBrowser;
+      patchProtractorWait(browser);
     });
   },
 
-  onComplete: function() {
-    dirTree(RESULTS_DIR).then(function (tree) {
-      writeFile(RESULTS_DIR + '/map.json', JSON.stringify(tree));
-    });
-  },
+  restartBrowserBetweenTests: true,
 
   jasmineNodeOpts: {
     showColors: true,
@@ -67,76 +46,18 @@ exports.config = {
   }
 };
 
-/**
- * Register benchpress runner
- */
-function registerBenchpressRunner() {
-  var
-    bindings = [
-      benchpress.SeleniumWebDriverAdapter.PROTRACTOR_BINDINGS,
-      benchpress.bind(benchpress.Options.FORCE_GC).toValue(false),
-      benchpress.bind(benchpress.Options.DEFAULT_DESCRIPTION).toValue({
-        'lang': 'js'
-      }),
-      benchpress.JsonFileReporter.BINDINGS,
-      benchpress.bind(benchpress.JsonFileReporter.PATH).toValue(''),
-      benchpress.Validator.bindTo(benchpress.RegressionSlopeValidator),
-      benchpress.bind(benchpress.RegressionSlopeValidator.SAMPLE_SIZE).toValue(SAMPLE_SIZE),
-      benchpress.MultiReporter.createBindings([
-        benchpress.ConsoleReporter,
-        benchpress.JsonFileReporter
-      ])
-    ];
+function patchProtractorWait(browser) {
+  // Tells protractor this isn't an Angular application
+  browser.ignoreSynchronization = true;
 
-  benchpress.Options.DEFAULT_BINDINGS.push(
-    benchpress.bind(benchpress.Options.WRITE_FILE).toValue(function(filename, content) {
-      var dirs;
-
-      filename = (RESULTS_DIR + '/' + hotVersion + '-' + filename.substr(1));
-      dirs = filename.split('/');
-
-      if (dirs.length > 1) {
-        return makeDirs(dirs.reverse().slice(1).reverse().join('/') + '/').then(function() {
-            return writeFile(filename, content);
-        });
-      }
-
-      return writeFile(filename, content);
-    })
-  );
-
-  return new benchpress.Runner(bindings);
+  // const _get = browser.get;
+  // const sleepInterval = process.env.TRAVIS || process.env.JENKINS_URL ? 7000 : 3000;
+  //
+  // browser.get = function() {
+  //   const result = _get.apply(this, arguments);
+  //
+  //   browser.sleep(sleepInterval);
+  //
+  //   return result;
+  // }
 }
-
-function writeFile(filename, content) {
-  return new Promise(function(resolve, reject) {
-    fs.writeFile(filename, content, function(error) {
-      if (error) {
-        reject(error);
-      } else {
-        resolve();
-      }
-    });
-  })
-}
-
-function makeDirs(path) {
-  return new Promise(function(resolve, reject) {
-    fs.mkdirs(path, function(error) {
-      if (error) {
-        reject(error);
-      } else {
-        resolve();
-      }
-    })
-  });
-}
-
-process.on('message', function(data) {
-  var toExport = data.toExport;
-
-  Object.keys(toExport).forEach(function(key) {
-    global[key] = toExport[key];
-  });
-  global.benchpressRunner = registerBenchpressRunner();
-});
