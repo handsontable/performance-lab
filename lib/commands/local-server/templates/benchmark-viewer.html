@@ -1,9 +1,11 @@
 <!doctype html>
 <head>
-  <script src="bower_components/axios/dist/axios.min.js"></script>
-  <script src="bower_components/Chart.js/Chart.min.js"></script>
-  <link href="//cdn.muicss.com/mui-0.0.8/css/mui.css" rel="stylesheet" type="text/css" />
-  <script src="//cdn.muicss.com/mui-0.0.8/js/mui.min.js"></script>
+  <script>module = {}</script>
+  <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/semver@5.6.0/semver.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@1.0.2/Chart.min.js"></script>
+  <link href="https://cdn.muicss.com/mui-0.0.8/css/mui.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.muicss.com/mui-0.0.8/js/mui.min.js"></script>
   <style>
     canvas {
       width: 100%;
@@ -80,10 +82,16 @@
     <span class="description"></span>
   </template>
 
-  <script src="js/observer.js"></script>
-  <script src="js/chart_item.js"></script>
-  <script src="js/bar_item.js"></script>
-  <script src="js/bar_manager.js"></script>
-  <script src="js/main.js"></script>
+  <script src="/js/observer.js"></script>
+  <script src="/js/chart-item.js"></script>
+  <script src="/js/bar-item.js"></script>
+  <script src="/js/bar-manager.js"></script>
+  <script>
+    (function() {
+      var statsMap = new Map({{{ stats }}});
+
+      new BarManager(statsMap, parseInt('{{ sampleSize }}', 10));
+    }());
+  </script>
 </body>
 </html>

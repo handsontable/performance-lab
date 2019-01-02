@@ -1,25 +1,27 @@
 {
   "name": "performance-lab",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Performance tests for Handsontable",
   "main": "./lib/cli.js",
   "bin": "./bin/hot-perf",
   "private": true,
   "devDependencies": {
-    "benchpress": "^2.0.0-alpha.27",
-    "dir-tree": "^1.0.1",
-    "fs-extra": "^0.18.0",
-    "hot-builder": "^0.2.2",
-    "http-server": "^0.8.0",
-    "merge": "^1.2.0",
-    "minimist": "^1.1.1",
-    "promise": "^7.0.0",
-    "protractor": "^2.0.0",
-    "traceur": "0.0.88"
+    "@angular/benchpress": "^0.1.0",
+    "axios": "^0.18.0",
+    "caporal": "^1.1.0",
+    "fs-extra": "^7.0.1",
+    "handlebars": "^4.0.12",
+    "hapi": "^17.8.1",
+    "inert": "^5.1.2",
+    "mongodb": "^3.1.10",
+    "protractor": "^4.0.14",
+    "semver": "^5.6.0",
+    "vision": "^5.4.4"
   },
   "scripts": {
-    "test": "./bin/hot-perf",
-    "postinstall": "./node_modules/.bin/webdriver-manager update && chmod +x bin/hot-perf"
+    "start": "./bin/hot-perf run",
+    "serve": "./bin/hot-perf local-server benchmark-viewer",
+    "postinstall": "webdriver-manager update && webdriver-manager update --versions.chrome 2.45 && chmod +x bin/hot-perf"
   },
   "repository": {
     "type": "git",
@@ -35,5 +37,7 @@
   "bugs": {
     "url": "https://github.com/handsontable/performance-lab/issues"
   },
-  "homepage": "https://github.com/handsontable/performance-lab"
+  "engines": {
+    "node": ">=11"
+  }
 }
