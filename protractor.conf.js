@@ -28,6 +28,9 @@ exports.config = {
   },
 
   specs: ['test/config.js', 'test/spec/**/*.spec.js'],
+  // specs: ['test/config.js', 'test/spec/arrow-keys-navigation.spec.js'],
+  // specs: ['test/config.js', 'test/spec/editing.spec.js'],
+  // specs: ['test/config.js', 'test/spec/view-scrolling.spec.js'],
   framework: 'jasmine2',
 
   onPrepare: function() {
