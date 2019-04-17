@@ -26,7 +26,7 @@ const runner = new benchpress.Runner(bindings);
 exports.runSample = async function(config) {
   config.providers = [{
     provide: benchpress.Options.SAMPLE_DESCRIPTION,
-    useValue: { hotVersion: HOT_VERSION || 'develop' }
+    useValue: { hotVersion: HOT_VERSION }
   }];
 
   return new Promise((resolve) => {

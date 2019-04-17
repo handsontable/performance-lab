@@ -47,9 +47,9 @@ It serves a page where you can compare your generated results between different 
 
 It runs a benchmark by running all spec files defined in the `test/spec` directory. Once completed results are saved to the database.
 
-##### ```> ./bin/hot-perf local-server <app_to_serve>```
+##### ```> ./bin/hot-perf local-server benchmark-viewer```
 
-Runs a local server.
+Runs a local server where you can see the test results.
 
 Arguments:
 - ```test-runner``` - It serves a test runner page which is used by protractor to test the Handsontable.
@@ -59,6 +59,7 @@ Arguments:
 - ```--hot-version``` - Selects version of the Handsontable to test (it has to be a version which is accessible through [jsdelivr](https://www.jsdelivr.com/)). If not specified the `latest` tag is used. For example `--hot-version=6.2.2`.
 - ```--hot-server``` - Selects a server to be used to serve the Handsontable assets. For example `--hot-server=http://localhost:8082`. If
 used the assets are loaded from `dist` directory, such as `http://localhost:8082/dist/handsontable.full.css`.
+- ```--test-name``` - The name under which the test will be saved. For example `--test-name=my-feature`.
 
 ## License
 
