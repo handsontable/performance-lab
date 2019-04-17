@@ -6,8 +6,8 @@
   <script src="/js/test-runner.js"></script>
   <style>
     #example {
-      width: 800px;
-      height: 500px;
+      width: 1000px;
+      height: 800px;
       overflow: hidden;
     }
   </style>
@@ -21,6 +21,10 @@
     data: Handsontable.helper.createSpreadsheetData(1000, 1000),
     rowHeaders: true,
     colHeaders: true,
+    // renderer: function(instance, TD, row, col, prop, value, cellProperties) {
+      // TD.classList.add('test-class');
+      // TD.innerHTML = '.<b>' + value + '</b>';
+    // },
     autoColumnSize: false, // AutoColumnSize is asynchronous so it has to be disabled to not inferred stat results
   });
 </script>

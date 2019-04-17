@@ -14,7 +14,7 @@ describe('navigating by scroll', () => {
       await waitUntilHotIsInitialized();
 
       browser.executeScript(`
-        hot.selectCell(20, 20);
+        hot.selectCell(2, 2);
         ${wtHolderInjection('master', 'scrollTop')}
         `);
 
