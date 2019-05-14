@@ -4,7 +4,6 @@ const USE_HEADLESS_MODE = false;
 
 exports.config = {
   directConnect: true,
-  // chromeDriver: path.resolve('./node_modules/protractor/node_modules/webdriver-manager/selenium/chromedriver_74.0.3729.6'),
   chromeDriver: path.resolve('./node_modules/webdriver-manager/selenium/chromedriver_74.0.3729.6'),
 
   capabilities: {
