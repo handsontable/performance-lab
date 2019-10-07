@@ -4,7 +4,7 @@ const USE_HEADLESS_MODE = false;
 
 exports.config = {
   directConnect: true,
-  chromeDriver: path.resolve('./node_modules/webdriver-manager/selenium/chromedriver_75.0.3770.90'),
+  chromeDriver: path.resolve('./node_modules/webdriver-manager/selenium/chromedriver_77.0.3865.40'),
 
   capabilities: {
     browserName: 'chrome',
