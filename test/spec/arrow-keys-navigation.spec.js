@@ -1,4 +1,4 @@
-const { runSample, openPage } = require('./../runner');
+const { runSample, openPage, SAMPLE_SIZE } = require('./../runner');
 const { waitUntilHotIsInitialized, sleep } = require('./../utils');
 
 describe('navigating by arrow key', () => {
@@ -21,7 +21,9 @@ describe('navigating by arrow key', () => {
       await openPage();
       await waitUntilHotIsInitialized();
 
-      browser.executeScript('hot.selectCell(500, 500)');
+      browser.executeScript(`
+        hot.selectCell(parseInt(hot.countRows() / 2, 10), parseInt(hot.countCols() / 2, 10))
+        `);
 
       await runSample({
         id: 'arrow-down.middle',
@@ -38,12 +40,15 @@ describe('navigating by arrow key', () => {
       await waitUntilHotIsInitialized();
 
       browser.executeScript(`
-        hot.selectCell(979, 979);
-        hot.scrollViewportTo(979, 979, false, true);
+        var __rows = hot.countRows() - 1;
+        var __cols = hot.countCols() - 1;
+
+        hot.selectCell(__rows, __cols);
+        hot.scrollViewportTo(__rows, __cols, false, true);
         `);
 
       await runSample({
-        id: 'arrow-down.most-bottom-right',
+        id: 'arrow-up.most-bottom-right',
         execute: () => {
           $(browser.rootEl).sendKeys(protractor.Key.ARROW_UP);
         },
@@ -73,7 +78,7 @@ describe('navigating by arrow key', () => {
       await waitUntilHotIsInitialized();
 
       browser.executeScript(`
-        hot.selectCell(500, 500);
+        hot.selectCell(parseInt(hot.countRows() / 2, 10), parseInt(hot.countCols() / 2, 10))
         `);
 
       await runSample({
@@ -91,14 +96,87 @@ describe('navigating by arrow key', () => {
       await waitUntilHotIsInitialized();
 
       browser.executeScript(`
-        hot.selectCell(979, 979);
-        hot.scrollViewportTo(979, 979, true, false);
+        var __rows = hot.countRows() - 1;
+        var __cols = hot.countCols() - 1;
+
+        hot.selectCell(__rows, __cols);
+        hot.scrollViewportTo(__rows, __cols, true, false);
         `);
 
       await runSample({
         id: 'arrow-left.most-bottom-right',
         execute: () => {
           $(browser.rootEl).sendKeys(protractor.Key.ARROW_LEFT);
+        },
+      });
+    });
+  });
+
+  describe('arrow down and arrow up', () => {
+    it('started from the middle position and back to the initial position', async () => {
+      await openPage();
+      await waitUntilHotIsInitialized();
+
+      browser.executeScript(`
+        hot.selectCell(parseInt(hot.countRows() / 2, 10), parseInt(hot.countCols() / 2, 10))
+        `);
+
+      let sampleSize = SAMPLE_SIZE;
+      let currentSampleSize = 0;
+
+      await runSample({
+        id: 'arrow-down-up.middle',
+        execute: () => {
+          if (currentSampleSize > sampleSize / 2) {
+            $(browser.rootEl).sendKeys(protractor.Key.ARROW_UP);
+            $(browser.rootEl).sendKeys(protractor.Key.ARROW_UP);
+          } else {
+            $(browser.rootEl).sendKeys(protractor.Key.ARROW_DOWN);
+            $(browser.rootEl).sendKeys(protractor.Key.ARROW_DOWN);
+          }
+
+          currentSampleSize ++;
+        },
+      });
+    });
+  });
+
+  describe('page down', () => {
+    it('started from the most top-left position', async () => {
+      await openPage();
+      await waitUntilHotIsInitialized();
+
+      browser.executeScript('hot.selectCell(0, 0)');
+
+      await runSample({
+        id: 'page-down.most-top-left',
+        execute: () => {
+          $(browser.rootEl).sendKeys(protractor.Key.PAGE_DOWN);
+        },
+      });
+    });
+  });
+
+  describe('page down and page up', () => {
+    it('started from the middle position and back to the initial position', async () => {
+      await openPage();
+      await waitUntilHotIsInitialized();
+
+      browser.executeScript(`hot.selectCell(0, 0)`);
+
+      let sampleSize = SAMPLE_SIZE;
+      let currentSampleSize = 0;
+
+      await runSample({
+        id: 'page-down-up.most-top-left',
+        execute: () => {
+          if (currentSampleSize > sampleSize / 2) {
+            $(browser.rootEl).sendKeys(protractor.Key.PAGE_UP);
+          } else {
+            $(browser.rootEl).sendKeys(protractor.Key.PAGE_DOWN);
+          }
+
+          currentSampleSize ++;
         },
       });
     });

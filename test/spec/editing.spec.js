@@ -26,8 +26,11 @@ describe('editing a cell', () => {
     await waitUntilHotIsInitialized();
 
     browser.executeScript(`
-      hot.selectCell(500, 500);
-      hot.scrollViewportTo(500, 500, false, true);
+      var __rows = parseInt(hot.countRows() / 2, 10);
+      var __cols = parseInt(hot.countCols() / 2, 10);
+
+      hot.selectCell(__rows, __cols);
+      hot.scrollViewportTo(__rows, __cols, false, true);
       `);
 
     await runSample({
@@ -45,8 +48,11 @@ describe('editing a cell', () => {
     await waitUntilHotIsInitialized();
 
     browser.executeScript(`
-      hot.selectCell(979, 979);
-      hot.scrollViewportTo(979, 979, true, true);
+      var __rows = hot.countRows() - 1;
+      var __cols = hot.countCols() - 1;
+
+      hot.selectCell(__rows, __cols);
+      hot.scrollViewportTo(__rows, __cols, true, true);
       `);
 
     await runSample({
