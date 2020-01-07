@@ -59,7 +59,7 @@ Arguments:
 - ```--hot-version``` - Selects version of the Handsontable to test (it has to be a version which is accessible through [jsdelivr](https://www.jsdelivr.com/)). If not specified the `latest` tag is used. For example `--hot-version=6.2.2`.
 - ```--hot-server``` - Selects a server to be used to serve the Handsontable assets. For example `--hot-server=http://localhost:8082`. If
 used the assets are loaded from `dist` directory, such as `http://localhost:8082/dist/handsontable.full.css`.
-- ```--test-name``` - The name under which the test will be saved. For example `--test-name=my-feature`.
+- ```--test-name``` - The name under which the test will be saved. For example `--test-name=my-feature`. If a test by that name is already stored, it will be replaced with the new test results.
 
 ## License
 
