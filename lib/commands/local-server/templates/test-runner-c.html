@@ -21,50 +21,58 @@
 <div id="example"></div>
 <script>
 
-  // var borders = [];
-  //
-  // for (var col = 15; col < 85; col++) {
-  //   for (var row = 0; row < 2; row++) {
-  //     borders.push({
-  //       row: row,
-  //       col: col,
-  //       left: {
-  //         width: 2,
-  //         color: 'red'
-  //       },
-  //       right: {
-  //         width: 2,
-  //         color: 'green'
-  //       }
-  //     });
-  //
-  //     borders.push({
-  //       row: row + 500,
-  //       col: col,
-  //       left: {
-  //         width: 2,
-  //         color: 'red'
-  //       },
-  //       right: {
-  //         width: 2,
-  //         color: 'green'
-  //       }
-  //     });
-  //
-  //     borders.push({
-  //       row: row + 900,
-  //       col: col,
-  //       left: {
-  //         width: 2,
-  //         color: 'red'
-  //       },
-  //       right: {
-  //         width: 2,
-  //         color: 'green'
-  //       }
-  //     });
-  //   }
-  // }
+  var borders = [];
+
+  for (var col = 15; col < 100; col++) {
+    if (col % 10) {
+      continue;
+    }
+
+    for (var row = 0; row < 1000; row++) {
+      if (row % 20) {
+        continue;
+      }
+
+      borders.push({
+        row: row,
+        col: col,
+        left: {
+          width: 2,
+          color: 'red'
+        },
+        right: {
+          width: 2,
+          color: 'green'
+        }
+      });
+
+      borders.push({
+        row: row + 500,
+        col: col,
+        left: {
+          width: 2,
+          color: 'red'
+        },
+        right: {
+          width: 2,
+          color: 'green'
+        }
+      });
+
+      borders.push({
+        row: row + 900,
+        col: col,
+        left: {
+          width: 2,
+          color: 'red'
+        },
+        right: {
+          width: 2,
+          color: 'green'
+        }
+      });
+    }
+  }
 
   var hot = new Handsontable(example, {
     // data: Handsontable.helper.createSpreadsheetData(10000, 100),
@@ -72,7 +80,7 @@
     // columns: columns,
     rowHeaders: true,
     colHeaders: true,
-    // customBorders: borders,
+    customBorders: borders,
     // columnSorting: {
     //   sortEmptyCells: true,
     //   initialConfig: {
@@ -148,7 +156,7 @@
 <script>
   setTimeout(function() {
     document.title = 'ready'; // Mark that the runner page is ready to tests
-  }, 100);
+  }, 3000);
 </script>
 </body>
 </html>

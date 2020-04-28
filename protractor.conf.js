@@ -4,7 +4,7 @@ const USE_HEADLESS_MODE = false;
 
 exports.config = {
   directConnect: true,
-  chromeDriver: path.resolve('./node_modules/webdriver-manager/selenium/chromedriver_77.0.3865.40'),
+  chromeDriver: path.resolve('./node_modules/webdriver-manager/selenium/chromedriver_81.0.4044.69'),
 
   capabilities: {
     browserName: 'chrome',
@@ -27,12 +27,13 @@ exports.config = {
     }
   },
 
-  specs: ['test/config.js', 'test/spec/**/*.spec.js'],
+  // specs: ['test/config.js', 'test/spec/**/*.spec.js'],
   // specs: ['test/config.js', 'test/spec/arrow-keys-navigation.spec.js', 'test/spec/editing.spec.js'],
   // specs: ['test/config.js', 'test/spec/arrow-keys-navigation.spec.js'],
   // specs: ['test/config.js', 'test/spec/editing.spec.js'],
   // specs: ['test/config.js', 'test/spec/altering.spec.js'],
   // specs: ['test/config.js', 'test/spec/view-scrolling.spec.js'],
+  specs: ['test/config.js', 'test/spec/column-hiding.spec.js'],
   framework: 'jasmine2',
 
   onPrepare: function() {
@@ -49,7 +50,9 @@ exports.config = {
   jasmineNodeOpts: {
     showColors: true,
     defaultTimeoutInterval: 1200000
-  }
+  },
+
+  // allScriptsTimeout: 1200000
 };
 
 function patchProtractorWait(browser) {
