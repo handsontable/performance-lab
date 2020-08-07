@@ -28,9 +28,9 @@ exports.config = {
     },
   },
 
-  // specs: ['test/config.js', 'test/spec/**/*.spec.js'],
+  specs: ['test/config.js', 'test/spec/**/*.spec.js'],
   // specs: ['test/config.js', 'test/spec/arrow-keys-navigation.spec.js', 'test/spec/editing.spec.js'],
-  specs: ['test/config.js', 'test/spec/arrow-keys-navigation.spec.js'],
+  // specs: ['test/config.js', 'test/spec/arrow-keys-navigation.spec.js'],
   // specs: ['test/config.js', 'test/spec/editing.spec.js'],
   // specs: ['test/config.js', 'test/spec/altering.spec.js'],
   // specs: ['test/config.js', 'test/spec/view-scrolling.spec.js'],
