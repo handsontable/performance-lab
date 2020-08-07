@@ -5,6 +5,8 @@ const path = require('path');
 
 const HOT_VERSION = process.env.HOT_VERSION;
 
+exports.SAMPLE_SIZE = config.SAMPLE_SIZE;
+
 const bindings = [
   benchpress.SeleniumWebDriverAdapter.PROTRACTOR_PROVIDERS,
   // { provide: benchpress.Options.FORCE_GC, useValue: true },

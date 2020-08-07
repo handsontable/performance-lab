@@ -6,7 +6,6 @@ services:
   mongo:
     container_name: performance-lab-mongodb
     image: mongo:4
-    command: --smallfiles
     ports:
       - 27017:27017
     environment:
@@ -21,6 +20,7 @@ services:
     ports:
       - 8081:8081
     environment:
+      ME_CONFIG_MONGODB_SERVER: mongo
       ME_CONFIG_MONGODB_ADMINUSERNAME: root
       ME_CONFIG_MONGODB_ADMINPASSWORD: root
     depends_on:

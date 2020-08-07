@@ -14,7 +14,6 @@ describe('navigating by scroll', () => {
       await waitUntilHotIsInitialized();
 
       browser.executeScript(`
-        hot.selectCell(2, 2);
         ${wtHolderInjection('master', 'scrollTop')}
         `);
 
@@ -26,12 +25,15 @@ describe('navigating by scroll', () => {
       });
     });
 
-    it('scroll down starting from the middle position', async () => {
+    xit('scroll down starting from the middle position', async () => {
       await openPage();
       await waitUntilHotIsInitialized();
 
       browser.executeScript(`
-        hot.selectCell(500, 500);
+        var __rows = parseInt(hot.countRows() / 2, 10);
+        var __cols = parseInt(hot.countCols() / 2, 10);
+
+        hot.selectCell(__rows, __cols);
         ${wtHolderInjection('master', 'scrollTop')}
         `);
 
@@ -48,7 +50,6 @@ describe('navigating by scroll', () => {
       await waitUntilHotIsInitialized();
 
       browser.executeScript(`
-        hot.selectCell(20, 20);
         ${wtHolderInjection('master', 'scrollLeft')}
         `);
 
@@ -60,12 +61,15 @@ describe('navigating by scroll', () => {
       });
     });
 
-    it('scroll right starting from the middle position', async () => {
+    xit('scroll right starting from the middle position', async () => {
       await openPage();
       await waitUntilHotIsInitialized();
 
       browser.executeScript(`
-        hot.selectCell(500, 500);
+        var __rows = parseInt(hot.countRows() / 2, 10);
+        var __cols = parseInt(hot.countCols() / 2, 10);
+
+        hot.selectCell(__rows, __cols);
         ${wtHolderInjection('master', 'scrollLeft')}
         `);
 
@@ -78,7 +82,7 @@ describe('navigating by scroll', () => {
     });
   });
 
-  describe('top overlay', () => {
+  xdescribe('top overlay', () => {
     it('scroll down starting from the most top-left position', async () => {
       await openPage();
       await waitUntilHotIsInitialized();
@@ -101,7 +105,10 @@ describe('navigating by scroll', () => {
       await waitUntilHotIsInitialized();
 
       browser.executeScript(`
-        hot.selectCell(500, 500);
+        var __rows = parseInt(hot.countRows() / 2, 10);
+        var __cols = parseInt(hot.countCols() / 2, 10);
+
+        hot.selectCell(__rows, __cols);
         ${wtHolderInjection('clone_top', 'scrollTop')}
         `);
 
@@ -135,7 +142,10 @@ describe('navigating by scroll', () => {
       await waitUntilHotIsInitialized();
 
       browser.executeScript(`
-        hot.selectCell(500, 500);
+        var __rows = parseInt(hot.countRows() / 2, 10);
+        var __cols = parseInt(hot.countCols() / 2, 10);
+
+        hot.selectCell(__rows, __cols);
         ${wtHolderInjection('clone_top', 'scrollLeft')}
         `);
 
@@ -148,7 +158,7 @@ describe('navigating by scroll', () => {
     });
   });
 
-  describe('left overlay', () => {
+  xdescribe('left overlay', () => {
     it('scroll down starting from the most top-left position', async () => {
       await openPage();
       await waitUntilHotIsInitialized();
@@ -171,7 +181,10 @@ describe('navigating by scroll', () => {
       await waitUntilHotIsInitialized();
 
       browser.executeScript(`
-        hot.selectCell(500, 500);
+        var __rows = parseInt(hot.countRows() / 2, 10);
+        var __cols = parseInt(hot.countCols() / 2, 10);
+
+        hot.selectCell(__rows, __cols);
         ${wtHolderInjection('clone_left', 'scrollTop')}
         `);
 
@@ -205,7 +218,10 @@ describe('navigating by scroll', () => {
       await waitUntilHotIsInitialized();
 
       browser.executeScript(`
-        hot.selectCell(500, 500);
+        var __rows = parseInt(hot.countRows() / 2, 10);
+        var __cols = parseInt(hot.countCols() / 2, 10);
+
+        hot.selectCell(__rows, __cols);
         ${wtHolderInjection('clone_left', 'scrollLeft')}
         `);
 

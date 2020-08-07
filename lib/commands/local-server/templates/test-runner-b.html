@@ -1,0 +1,168 @@
+<!doctype html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="{{ urls.style }}">
+  <script src="{{ urls.script }}"></script>
+  <script src="/js/test-runner.js"></script>
+  <style>
+    #example {
+      width: 1250px;
+      height: 800px;
+      overflow: hidden;
+    }
+    .currentRow, .currentCol {
+      background-color: #ccc !important;
+    }
+  </style>
+</head>
+<html>
+<body>
+
+<div id="example"></div>
+<script>
+  Handsontable.renderers.registerRenderer('flagRenderer', function (instance, td, row, col, prop, value, cellProperties) {
+    var currencyCode = value;
+
+    while (td.firstChild) {
+      td.removeChild(td.firstChild);
+    }
+    var flagElement = document.createElement('DIV');
+
+    flagElement.className = 'flag ' + currencyCode;
+    flagElement.textContent = '[flag]-' + value;
+    td.appendChild(flagElement);
+  });
+  Handsontable.renderers.registerRenderer('firstRowRenderer', function (instance, td, row, col, prop, value, cellProperties) {
+    Handsontable.renderers.TextRenderer.apply(this, arguments);
+    td.style.fontWeight = 'bold';
+    td.style.color = 'green';
+    td.style.background = '#CEC';
+  });
+  Handsontable.renderers.registerRenderer('firstColRenderer', function (instance, td, row, col, prop, value, cellProperties) {
+    Handsontable.renderers.TextRenderer.apply(this, arguments);
+    td.style.fontWeight = 'bold';
+    td.style.color = 'red';
+    td.style.background = '#eecccc';
+  });
+  var columns = [];
+  var baseColumns = [
+    {
+      type: 'numeric',
+      width: 40,
+    },
+    {
+			renderer: 'flagRenderer'
+    },
+    { type: 'text' },
+    { type: 'text' },
+    { type: 'text' },
+    { type: 'text', width: 100, },
+    { type: 'text' },
+    { type: 'text' },
+    { type: 'text' },
+    { type: 'text' },
+    { type: 'text', width: 150, },
+    {
+      type: 'numeric',
+      numericFormat: {
+        pattern: '0.0000'
+      }
+    },
+    {
+      type: 'date',
+      dateFormat: 'MM/DD/YYYY'
+    },
+    {
+      type: 'numeric',
+      numericFormat: {
+        pattern: '0.00%'
+      },
+      width: 90,
+    },
+    {
+      type: 'autocomplete',
+    },
+    {
+      type: 'dropdown',
+    },
+  ];
+
+  // for (var i = 0; i < 1000; i++) {
+  //   columns.push(JSON.parse(JSON.stringify(baseColumns[i % (baseColumns.length)])));
+  // }
+
+  var hot = new Handsontable(example, {
+    licenseKey: 'non-commercial-and-evaluation',
+    // data: Handsontable.helper.createSpreadsheetData(10000, 100),
+    data: Handsontable.helper.createSpreadsheetData(1000, 100),
+    // columns: columns,
+    rowHeaders: true,
+    colHeaders: true,
+    // currentRowClassName: 'currentRow',
+    // currentColClassName: 'currentCol',
+    // colWidths: 30,
+    // viewportRowRenderingOffset: 0,
+    // viewportColumnRenderingOffset: 0,
+    afterModifyTransformStart: function(coords, rowTransformDir, colTransformDir) {
+      if (rowTransformDir === -1) {
+        coords.col = coords.col + 20;
+      }
+      if (rowTransformDir === 1) {
+        coords.col = coords.col - 20;
+      }
+    },
+    fixedColumnsLeft: 2,
+    fixedRowsTop: 2,
+    // cells: function(row, col) {
+    //   var cellProperties = {};
+    //   var data = this.instance.getDataAtCell(row, col);
+    //
+    //   if (row === 0 || data === 'readOnly') {
+    //     cellProperties.readOnly = true;
+    //   }
+    //   if (row === 0 || row === 1) {
+    //     cellProperties.renderer = 'firstRowRenderer';
+    //   }
+    //   if (col === 0 || col === 1) {
+    //     cellProperties.renderer = 'firstColRenderer';
+    //   }
+    //
+    //   if (row === 0 && col === 0) {
+    //     cellProperties.className = 'htRight';
+    //   }
+    //   if (row === 1 && col === 1) {
+    //     cellProperties.className = 'htRight';
+    //   }
+    //   if (row === 3 && col === 4) {
+    //     cellProperties.className = 'htRight';
+    //   }
+    //
+    //   return cellProperties;
+    // },
+    // renderer: function(instance, TD, row, col, prop, value, cellProperties) {
+    //   Handsontable.renderers.BaseRenderer.call(this, instance, TD, row, col, prop, value, cellProperties);
+    //
+    //   value = row % 2 ? value : (value + '<b>' + value.substr(0, 2) + '</b>');
+    //
+    //   TD.innerHTML = value;
+    //   TD.setAttribute('id-row', row);
+    //   TD.setAttribute('id-col', col);
+    //   TD.setAttribute('id-prop', prop);
+    //   TD.classList.add('class-' + row);
+    //   TD.style.color = '#999';
+    // },
+    // renderer: function(instance, TD, row, col, prop, value, cellProperties) {
+    //   TD.classList.add('test-class');
+    //   TD.innerHTML = '.<b>' + value + '</b>';
+    // },
+    autoColumnSize: false, // AutoColumnSize is asynchronous so it has to be disabled to not inferred stat results
+  });
+</script>
+<script>document.writeln('Build date: ' + Handsontable.buildDate + ', version: ' + Handsontable.version)</script>
+<script>
+  setTimeout(function() {
+    document.title = 'ready'; // Mark that the runner page is ready to tests
+  }, 500);
+</script>
+</body>
+</html>

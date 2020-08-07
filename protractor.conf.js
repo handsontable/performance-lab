@@ -4,14 +4,14 @@ const USE_HEADLESS_MODE = false;
 
 exports.config = {
   directConnect: true,
-  chromeDriver: path.resolve('./node_modules/webdriver-manager/selenium/chromedriver_74.0.3729.6'),
+  chromeDriver: path.resolve('./node_modules/webdriver-manager/selenium/chromedriver_84.0.4147.30'),
 
   capabilities: {
     browserName: 'chrome',
     chromeOptions: {
-      'args': ['--js-flags=--expose-gc', '--window-size=1200,1000', ...(USE_HEADLESS_MODE ? ['--headless', '--disable-gpu'] : []) ],
+      'args': ['--js-flags=--expose-gc', '--window-size=1300,1000', ...(USE_HEADLESS_MODE ? ['--headless', '--disable-gpu'] : []) ],
       'perfLoggingPrefs': {
-        'traceCategories': 'v8,blink.console,devtools.timeline,devtools.timeline.frame'
+        'traceCategories': 'v8,blink.console,devtools.timeline,devtools.timeline.frame,blink.user_timing'
       },
       // 'mobileEmulation': {
       //   'deviceMetrics': {
@@ -24,12 +24,15 @@ exports.config = {
     loggingPrefs: {
       performance: 'ALL',
       browser: 'ALL',
-    }
+      driver: 'ALL',
+    },
   },
 
   specs: ['test/config.js', 'test/spec/**/*.spec.js'],
+  // specs: ['test/config.js', 'test/spec/arrow-keys-navigation.spec.js', 'test/spec/editing.spec.js'],
   // specs: ['test/config.js', 'test/spec/arrow-keys-navigation.spec.js'],
   // specs: ['test/config.js', 'test/spec/editing.spec.js'],
+  // specs: ['test/config.js', 'test/spec/altering.spec.js'],
   // specs: ['test/config.js', 'test/spec/view-scrolling.spec.js'],
   framework: 'jasmine2',
 
@@ -42,6 +45,7 @@ exports.config = {
   },
 
   restartBrowserBetweenTests: true,
+  skipSourceMapSupport: true,
 
   jasmineNodeOpts: {
     showColors: true,
