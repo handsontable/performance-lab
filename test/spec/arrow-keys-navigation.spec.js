@@ -12,7 +12,9 @@ describe('navigating by arrow key', () => {
       await runSample({
         id: 'arrow-down.most-top-left',
         execute: () => {
-          $(browser.rootEl).sendKeys(protractor.Key.ARROW_DOWN);
+          browser.actions()
+            .sendKeys(protractor.Key.ARROW_DOWN)
+            .perform();
         },
       });
     });
@@ -28,7 +30,9 @@ describe('navigating by arrow key', () => {
       await runSample({
         id: 'arrow-down.middle',
         execute: () => {
-          $(browser.rootEl).sendKeys(protractor.Key.ARROW_DOWN);
+          browser.actions()
+            .sendKeys(protractor.Key.ARROW_DOWN)
+            .perform();
         },
       });
     });
@@ -50,7 +54,9 @@ describe('navigating by arrow key', () => {
       await runSample({
         id: 'arrow-up.most-bottom-right',
         execute: () => {
-          $(browser.rootEl).sendKeys(protractor.Key.ARROW_UP);
+          browser.actions()
+            .sendKeys(protractor.Key.ARROW_UP)
+            .perform();
         },
       });
     });
@@ -68,7 +74,9 @@ describe('navigating by arrow key', () => {
       await runSample({
         id: 'arrow-right.most-top-left',
         execute: () => {
-          $(browser.rootEl).sendKeys(protractor.Key.ARROW_RIGHT);
+          browser.actions()
+            .sendKeys(protractor.Key.ARROW_RIGHT)
+            .perform();
         },
       });
     });
@@ -84,7 +92,9 @@ describe('navigating by arrow key', () => {
       await runSample({
         id: 'arrow-right.middle',
         execute: () => {
-          $(browser.rootEl).sendKeys(protractor.Key.ARROW_RIGHT);
+          browser.actions()
+            .sendKeys(protractor.Key.ARROW_RIGHT)
+            .perform();
         },
       });
     });
@@ -106,7 +116,9 @@ describe('navigating by arrow key', () => {
       await runSample({
         id: 'arrow-left.most-bottom-right',
         execute: () => {
-          $(browser.rootEl).sendKeys(protractor.Key.ARROW_LEFT);
+          browser.actions()
+            .sendKeys(protractor.Key.ARROW_LEFT)
+            .perform();
         },
       });
     });
@@ -128,11 +140,19 @@ describe('navigating by arrow key', () => {
         id: 'arrow-down-up.middle',
         execute: () => {
           if (currentSampleSize > sampleSize / 2) {
-            $(browser.rootEl).sendKeys(protractor.Key.ARROW_UP);
-            $(browser.rootEl).sendKeys(protractor.Key.ARROW_UP);
+            browser.actions()
+              .sendKeys(protractor.Key.ARROW_UP)
+              .perform();
+            browser.actions()
+              .sendKeys(protractor.Key.ARROW_UP)
+              .perform();
           } else {
-            $(browser.rootEl).sendKeys(protractor.Key.ARROW_DOWN);
-            $(browser.rootEl).sendKeys(protractor.Key.ARROW_DOWN);
+            browser.actions()
+              .sendKeys(protractor.Key.ARROW_DOWN)
+              .perform();
+            browser.actions()
+              .sendKeys(protractor.Key.ARROW_DOWN)
+              .perform();
           }
 
           currentSampleSize ++;
@@ -151,7 +171,9 @@ describe('navigating by arrow key', () => {
       await runSample({
         id: 'page-down.most-top-left',
         execute: () => {
-          $(browser.rootEl).sendKeys(protractor.Key.PAGE_DOWN);
+          browser.actions()
+            .sendKeys(protractor.Key.PAGE_DOWN)
+            .perform();
         },
       });
     });
@@ -171,9 +193,13 @@ describe('navigating by arrow key', () => {
         id: 'page-down-up.most-top-left',
         execute: () => {
           if (currentSampleSize > sampleSize / 2) {
-            $(browser.rootEl).sendKeys(protractor.Key.PAGE_UP);
+            browser.actions()
+              .sendKeys(protractor.Key.PAGE_UP)
+              .perform();
           } else {
-            $(browser.rootEl).sendKeys(protractor.Key.PAGE_DOWN);
+            browser.actions()
+              .sendKeys(protractor.Key.PAGE_DOWN)
+              .perform();
           }
 
           currentSampleSize ++;
