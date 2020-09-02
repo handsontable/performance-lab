@@ -4,7 +4,7 @@ JavaScript performance tests for Handsontable
 
 ## Install
 
-The minimal Node version which this project can run on is 11. Make sure that your version meets that criteria before
+The minimal Node version which this project can run on is 14. Make sure that your version meets that criteria before
 you continue with the installation.
 
 Install dependencies via [NPM](https://npmjs.com/)
