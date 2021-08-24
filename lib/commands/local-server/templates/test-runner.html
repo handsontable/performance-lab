@@ -4,11 +4,21 @@
   <link rel="stylesheet" href="{{ urls.style }}">
   <script src="{{ urls.script }}"></script>
   <script src="/js/test-runner.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/dist/moment.js"></script>
   <style>
     #example {
       width: 1000px;
       height: 800px;
       overflow: hidden;
+    }
+    .yellow-bg {
+      background-color: yellow !important;
+    }
+    .blue-bg {
+      background-color: blue !important;
+    }
+    .red-bg {
+      background-color: red !important;
     }
   </style>
 </head>
@@ -17,16 +27,73 @@
 
 <div id="example"></div>
 <script>
+  var rows = 1000;
+  var cols = 100;
   var hot = new Handsontable(example, {
     licenseKey: 'non-commercial-and-evaluation',
-    data: Handsontable.helper.createSpreadsheetData(1000, 1000),
+    data: Handsontable.helper.createSpreadsheetData(rows, cols),
+    // data: Handsontable.helper.createSpreadsheetData(10000, 100),
     rowHeaders: true,
     colHeaders: true,
+    // colWidths: 100,
+    // cells(row, col) {
+    //   const cellProperties = {};
+    //   const visualRowIndex = this.instance.toVisualRow(row);
+    //   const visualColIndex = this.instance.toVisualColumn(col);
+    //   const data = this.instance.getDataAtCell(visualRowIndex, visualColIndex);
+    //
+    //   if (visualRowIndex === 0 || visualColIndex === 0) {
+    //     cellProperties.readOnly = true;
+    //   }
+    //
+    //   if (data.indexOf('5') >= 0) {
+    //     cellProperties.className = 'red-bg';
+    //   }
+    //
+    //   if (row % 5 === 1) {
+    //     cellProperties.className = 'yellow-bg';
+    //   }
+    //
+    //   if (col % 5 === 1) {
+    //     cellProperties.className = 'blue-bg';
+    //   }
+    //
+    //   if (row % 12 === 1) {
+    //     cellProperties.readOnly = true;
+    //   }
+    //
+    //   if (row % 7 === 1) {
+    //     cellProperties.renderer = function(hot, td, row, col, prop, value) {
+    //       td.textContent = `.x${value}x.`;
+    //     };
+    //   }
+    //
+    //   return cellProperties;
+    // },
+    // beforeGetCellMeta(row, column, cellProperties) {
+    //   if (row % 10 === 1) {
+    //     cellProperties.type = 'date';
+    //   }
+    // },
+    // afterGetCellMeta(row, column, cellProperties) {
+    //   cellProperties.myProp = 1;
+    //   cellProperties.myProp2 = 'foo';
+    // },
     // renderer: function(instance, TD, row, col, prop, value, cellProperties) {
       // TD.classList.add('test-class');
       // TD.innerHTML = '.<b>' + value + '</b>';
     // },
     autoColumnSize: false, // AutoColumnSize is asynchronous so it has to be disabled to not inferred stat results
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.keyCode === 13) {
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+          hot.getCellMeta(r, c);
+        }
+      }
+    }
   });
 </script>
 <script>document.writeln('Build date: ' + Handsontable.buildDate + ', version: ' + Handsontable.version)</script>
@@ -35,3 +102,4 @@
 </script>
 </body>
 </html>
+<!-- // (1 - 26.05/28.76) * 100 -->

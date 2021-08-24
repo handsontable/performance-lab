@@ -10,20 +10,20 @@
     "@hapi/hapi": "^19.2.0",
     "@hapi/inert": "^6.0.1",
     "@hapi/vision": "^6.0.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "caporal": "^1.4.0",
     "fs-extra": "^9.0.1",
     "handlebars": "^4.7.6",
-    "mongodb": "^3.6.0",
+    "mongodb": "^3.6.4",
     "protractor": "^7.0.0",
     "rxjs": "^6.6.2",
     "semver": "^7.3.2",
-    "webdriver-manager": "^12.1.7"
+    "webdriver-manager": "^12.1.8"
   },
   "scripts": {
     "start": "./bin/hot-perf run",
     "serve": "./bin/hot-perf local-server benchmark-viewer",
-    "postinstall": "webdriver-manager update && webdriver-manager update --versions.chrome 84.0.4147.30 && chmod +x bin/hot-perf"
+    "postinstall": "webdriver-manager update && webdriver-manager update --versions.chrome 92.0.4515.107 && chmod +x bin/hot-perf"
   },
   "repository": {
     "type": "git",

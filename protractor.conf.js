@@ -4,7 +4,7 @@ const USE_HEADLESS_MODE = false;
 
 exports.config = {
   directConnect: true,
-  chromeDriver: path.resolve('./node_modules/webdriver-manager/selenium/chromedriver_84.0.4147.30'),
+  chromeDriver: path.resolve('./node_modules/webdriver-manager/selenium/chromedriver_92.0.4515.107'),
 
   capabilities: {
     browserName: 'chrome',
@@ -13,13 +13,6 @@ exports.config = {
       'perfLoggingPrefs': {
         'traceCategories': 'v8,blink.console,devtools.timeline,devtools.timeline.frame,blink.user_timing'
       },
-      // 'mobileEmulation': {
-      //   'deviceMetrics': {
-      //     'width': 600,
-      //     'height': 960,
-      //     'pixelRatio': 1
-      //   }
-      // }
     },
     loggingPrefs: {
       performance: 'ALL',
@@ -28,12 +21,14 @@ exports.config = {
     },
   },
 
-  specs: ['test/config.js', 'test/spec/**/*.spec.js'],
+  // specs: ['test/config.js', 'test/spec/**/*.spec.js'],
+  // specs: ['test/config.js', 'test/spec/view-scrolling.spec.js'],
   // specs: ['test/config.js', 'test/spec/arrow-keys-navigation.spec.js', 'test/spec/editing.spec.js'],
+  // specs: ['test/config.js', 'test/spec/arrow-keys-navigation.spec.js', 'test/spec/editing.spec.js', 'test/spec/view-scrolling.spec.js'],
   // specs: ['test/config.js', 'test/spec/arrow-keys-navigation.spec.js'],
   // specs: ['test/config.js', 'test/spec/editing.spec.js'],
   // specs: ['test/config.js', 'test/spec/altering.spec.js'],
-  // specs: ['test/config.js', 'test/spec/view-scrolling.spec.js'],
+  specs: ['test/config.js', 'test/spec/get-cell-meta.spec.js'],
   framework: 'jasmine2',
 
   onPrepare: function() {

@@ -146,7 +146,13 @@ describe('navigating by arrow key', () => {
             browser.actions()
               .sendKeys(protractor.Key.ARROW_UP)
               .perform();
+            browser.actions()
+              .sendKeys(protractor.Key.ARROW_UP)
+              .perform();
           } else {
+            browser.actions()
+              .sendKeys(protractor.Key.ARROW_DOWN)
+              .perform();
             browser.actions()
               .sendKeys(protractor.Key.ARROW_DOWN)
               .perform();

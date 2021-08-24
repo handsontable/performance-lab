@@ -11,6 +11,7 @@ const bindings = [
   benchpress.SeleniumWebDriverAdapter.PROTRACTOR_PROVIDERS,
   // { provide: benchpress.Options.FORCE_GC, useValue: true },
   { provide: benchpress.RegressionSlopeValidator.SAMPLE_SIZE, useValue: config.SAMPLE_SIZE },
+  // { provide: benchpress.Options.CAPTURE_FRAMES, useValue: true },
   benchpress.JsonFileReporter.PROVIDERS,
   benchpress.MultiReporter.provideWith([
     benchpress.ConsoleReporter,
