@@ -1,10 +1,11 @@
 const path = require('path');
 
 const USE_HEADLESS_MODE = false;
+const CPU_THROTTLE_RATE = process.env.CPU_THROTTLE_RATE;
 
 exports.config = {
   directConnect: true,
-  chromeDriver: path.resolve('./node_modules/webdriver-manager/selenium/chromedriver_84.0.4147.30'),
+  chromeDriver: path.resolve('./node_modules/webdriver-manager/selenium/chromedriver_105.0.5195.52'),
 
   capabilities: {
     browserName: 'chrome',
@@ -56,6 +57,12 @@ exports.config = {
 function patchProtractorWait(browser) {
   // Tells protractor this isn't an Angular application
   browser.ignoreSynchronization = true;
+
+  if (CPU_THROTTLE_RATE) {
+    browser.driver.sendChromiumCommand('Emulation.setCPUThrottlingRate', {
+      rate: parseInt(CPU_THROTTLE_RATE, 10)
+    });
+  }
 
   // const _get = browser.get;
   // const sleepInterval = process.env.TRAVIS || process.env.JENKINS_URL ? 7000 : 3000;

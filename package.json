@@ -1,6 +1,6 @@
 {
   "name": "performance-lab",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "Performance tests for Handsontable",
   "main": "./lib/cli.js",
   "bin": "./bin/hot-perf",
@@ -18,12 +18,12 @@
     "protractor": "^7.0.0",
     "rxjs": "^6.6.2",
     "semver": "^7.3.2",
-    "webdriver-manager": "^12.1.7"
+    "webdriver-manager": "^12.1.8"
   },
   "scripts": {
     "start": "./bin/hot-perf run",
     "serve": "./bin/hot-perf local-server benchmark-viewer",
-    "postinstall": "webdriver-manager update && webdriver-manager update --versions.chrome 84.0.4147.30 && chmod +x bin/hot-perf"
+    "postinstall": "webdriver-manager update && webdriver-manager update --versions.chrome 105.0.5195.52 && chmod +x bin/hot-perf"
   },
   "repository": {
     "type": "git",

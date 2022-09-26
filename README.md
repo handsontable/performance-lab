@@ -4,7 +4,7 @@ JavaScript performance tests for Handsontable
 
 ## Install
 
-The minimal Node version which this project can run on is 11. Make sure that your version meets that criteria before
+The minimal Node version which this project can run on is 14. Make sure that your version meets that criteria before
 you continue with the installation.
 
 Install dependencies via [NPM](https://npmjs.com/)
@@ -60,6 +60,7 @@ Arguments:
 - ```--hot-server``` - Selects a server to be used to serve the Handsontable assets. For example `--hot-server=http://localhost:8082`. If
 used the assets are loaded from `dist` directory, such as `http://localhost:8082/dist/handsontable.full.css`.
 - ```--test-name``` - The name under which the test will be saved. For example `--test-name=my-feature`. If a test by that name is already stored, it will be replaced with the new test results.
+- ```--cpu-throttle-rate``` - The argument sets the CPU throttle rate for the browser. Adjusting the clock speed of the CPU slows down the computer. This can be useful for detecting slight deviations in performance that normally cannot be seen on a fast computer. It's advisable to perform the tests with rate sets as 4, for example, `--cpu-throttle-rate=4`.
 
 ## License
 
