@@ -9,7 +9,7 @@ describe('altering a table', () => {
     await runSample({
       id: 'altering.creating-row-top',
       execute: () => {
-        browser.executeScript(`hot.alter('insert_row', 1, 5)`);
+        browser.executeScript(`hot.alter('insert_row_above', 1, 5)`);
       },
     });
   });
@@ -21,7 +21,7 @@ describe('altering a table', () => {
     await runSample({
       id: 'altering.creating-column-top',
       execute: () => {
-        browser.executeScript(`hot.alter('insert_col', 1, 5)`);
+        browser.executeScript(`hot.alter('insert_col_start', 1, 5)`);
       },
     });
   });
