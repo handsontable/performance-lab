@@ -5,7 +5,7 @@ const CPU_THROTTLE_RATE = process.env.CPU_THROTTLE_RATE;
 
 exports.config = {
   directConnect: true,
-  chromeDriver: path.resolve('./node_modules/webdriver-manager/selenium/chromedriver_105.0.5195.52'),
+  chromeDriver: path.resolve('./node_modules/chromedriver/bin/chromedriver'),
 
   capabilities: {
     browserName: 'chrome',
