@@ -1,18 +1,23 @@
-const path = require('path');
+const path = require("path");
 
 const USE_HEADLESS_MODE = false;
 const CPU_THROTTLE_RATE = process.env.CPU_THROTTLE_RATE;
 
 exports.config = {
   directConnect: true,
-  chromeDriver: path.resolve('./node_modules/chromedriver/bin/chromedriver'),
+  chromeDriver: path.resolve("./node_modules/chromedriver/bin/chromedriver"),
   // SELENIUM_PROMISE_MANAGER: false,
   capabilities: {
-    browserName: 'chrome',
+    browserName: "chrome",
     chromeOptions: {
-      'args': ['--js-flags=--expose-gc', '--window-size=1300,1000', ...(USE_HEADLESS_MODE ? ['--headless', '--disable-gpu'] : []) ],
-      'perfLoggingPrefs': {
-        'traceCategories': 'v8,blink.console,devtools.timeline,devtools.timeline.frame,blink.user_timing'
+      args: [
+        "--js-flags=--expose-gc",
+        "--window-size=1300,1000",
+        ...(USE_HEADLESS_MODE ? ["--headless", "--disable-gpu"] : []),
+      ],
+      perfLoggingPrefs: {
+        traceCategories:
+          "v8,blink.console,devtools.timeline,devtools.timeline.frame,blink.user_timing",
       },
       // 'mobileEmulation': {
       //   'deviceMetrics': {
@@ -23,24 +28,24 @@ exports.config = {
       // }
     },
     loggingPrefs: {
-      performance: 'ALL',
-      browser: 'ALL',
-      driver: 'ALL',
+      performance: "ALL",
+      browser: "ALL",
+      driver: "ALL",
     },
   },
 
-  specs: ['test/spec/**/*.spec.js'],
+  specs: ["test/spec/**/*.spec.js"],
   // specs: ['test/config.js', 'test/spec/arrow-keys-navigation.spec.js', 'test/spec/editing.spec.js'],
   // specs: ['test/config.js', 'test/spec/arrow-keys-navigation.spec.js'],
   // specs: ['test/config.js', 'test/spec/editing.spec.js'],
   // specs: ['test/config.js', 'test/spec/altering.spec.js'],
   // specs: ['test/config.js', 'test/spec/view-scrolling.spec.js'],
-  framework: 'jasmine2',
+  framework: "jasmine2",
 
-  onPrepare: function() {
+  onPrepare: function () {
     patchProtractorWait(browser);
 
-    beforeEach(function() {
+    beforeEach(function () {
       patchProtractorWait(browser);
     });
   },
@@ -51,8 +56,8 @@ exports.config = {
   jasmineNodeOpts: {
     showColors: true,
     // 5 minute timeout
-    defaultTimeoutInterval: 300000
-  }
+    defaultTimeoutInterval: 300000,
+  },
 };
 
 function patchProtractorWait(browser) {
@@ -60,8 +65,8 @@ function patchProtractorWait(browser) {
   browser.ignoreSynchronization = true;
 
   if (CPU_THROTTLE_RATE) {
-    browser.driver.sendChromiumCommand('Emulation.setCPUThrottlingRate', {
-      rate: parseInt(CPU_THROTTLE_RATE, 10)
+    browser.driver.sendChromiumCommand("Emulation.setCPUThrottlingRate", {
+      rate: parseInt(CPU_THROTTLE_RATE, 10),
     });
   }
 
