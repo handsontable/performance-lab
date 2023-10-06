@@ -1,6 +1,4 @@
 const config = require("./../lib/config");
-const fs = require("fs-extra");
-const path = require("path");
 
 const HOT_VERSION = process.env.HOT_VERSION;
 
@@ -14,9 +12,7 @@ exports.runSample = async function (benchpressConfig) {
     // { provide: benchpress.Options.FORCE_GC, useValue: true },
     {
       provide: benchpress.RegressionSlopeValidator.SAMPLE_SIZE,
-      useValue: benchpressConfig.SAMPLE_SIZE
-        ? benchpressConfig.SAMPLE_SIZE
-        : config.SAMPLE_SIZE,
+      useValue: benchpressConfig.SAMPLE_SIZE ?? config.SAMPLE_SIZE,
     },
     benchpress.JsonFileReporter.PROVIDERS,
     benchpress.MultiReporter.provideWith([
