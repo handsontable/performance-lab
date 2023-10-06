@@ -6,24 +6,25 @@
   "bin": "./bin/hot-perf",
   "private": true,
   "devDependencies": {
-    "@angular/benchpress": "^0.2.1",
+    "@angular/benchpress": "^0.3.0",
     "@hapi/hapi": "^19.2.0",
     "@hapi/inert": "^6.0.1",
     "@hapi/vision": "^6.0.0",
     "axios": "^0.19.2",
     "caporal": "^1.4.0",
+    "chromedriver": "^117.0.3",
     "fs-extra": "^9.0.1",
     "handlebars": "^4.7.6",
     "mongodb": "^3.6.0",
+    "prettier": "3.0.3",
     "protractor": "^7.0.0",
-    "rxjs": "^6.6.2",
-    "semver": "^7.3.2",
-    "webdriver-manager": "^12.1.8"
+    "rxjs": "^7.8.1",
+    "semver": "^7.3.2"
   },
   "scripts": {
     "start": "./bin/hot-perf run",
     "serve": "./bin/hot-perf local-server benchmark-viewer",
-    "postinstall": "webdriver-manager update && webdriver-manager update --versions.chrome 105.0.5195.52 && chmod +x bin/hot-perf"
+    "postinstall": "chmod +x bin/hot-perf"
   },
   "repository": {
     "type": "git",
