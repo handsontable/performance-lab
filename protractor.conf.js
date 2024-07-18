@@ -13,6 +13,16 @@ exports.config = {
       args: [
         "--js-flags=--expose-gc",
         "--window-size=1300,1000",
+        "--disable-dev-shm-usage",
+        "--no-sandbox",
+        "--disable-extensions",
+        "--disable-infobars",
+        "--disable-notifications",
+        "--disable-popup-blocking",
+        "--disable-default-apps",
+        "--enable-automation",
+        "--log-level=3",
+        `user-data-dir=${path.resolve(`./temp/browser_profile/${Math.random()}`)}`,
         ...(USE_HEADLESS_MODE ? ["--headless", "--disable-gpu"] : []),
       ],
       perfLoggingPrefs: {
