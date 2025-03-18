@@ -10,6 +10,7 @@ exports.config = {
   capabilities: {
     browserName: "chrome",
     chromeOptions: {
+      // binary: path.resolve("./temp/chrome_125/Google.app/Contents/MacOS/Google"),
       args: [
         "--js-flags=--expose-gc",
         "--window-size=1300,1000",
@@ -44,9 +45,9 @@ exports.config = {
     },
   },
 
-  specs: ["test/spec/**/*.spec.js"],
-  // specs: ['test/config.js', 'test/spec/arrow-keys-navigation.spec.js', 'test/spec/editing.spec.js'],
-  // specs: ['test/config.js', 'test/spec/arrow-keys-navigation.spec.js'],
+  // specs: ["test/spec/**/*.spec.js"],
+  // specs: ['test/config.js', 'test/spec/arrow-keys-navigation.spec.js', 'test/spec/editing.spec.js', 'test/spec/view-scrolling.spec.js'],
+  specs: ['test/config.js', 'test/spec/arrow-keys-navigation.spec.js'],
   // specs: ['test/config.js', 'test/spec/editing.spec.js'],
   // specs: ['test/config.js', 'test/spec/altering.spec.js'],
   // specs: ['test/config.js', 'test/spec/view-scrolling.spec.js'],

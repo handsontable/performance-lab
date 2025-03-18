@@ -1,7 +1,9 @@
 <!doctype html>
 <head>
   <title></title>
-  <link rel="stylesheet" href="{{ urls.style }}">
+  <link rel="stylesheet" href="{{ urls.style_core }}">
+  <link rel="stylesheet" href="{{ urls.style_theme_main }}">
+  <link rel="stylesheet" href="{{ urls.style_theme_horizon }}">
   <script src="{{ urls.script }}"></script>
   <script src="/js/test-runner.js"></script>
   <style>
@@ -21,6 +23,13 @@
     data: Handsontable.helper.createSpreadsheetData(1000, 1000),
     rowHeaders: true,
     colHeaders: true,
+    themeName: 'ht-theme-main',
+    rowHeights: 37,
+    colWidths: 80,
+    viewportColumnRenderingOffset: 5,
+    viewportRowRenderingOffset: 5,
+    // renderAllRows: true,
+    // renderAllColumns: true,
     // renderer: function(instance, TD, row, col, prop, value, cellProperties) {
       // TD.classList.add('test-class');
       // TD.innerHTML = '.<b>' + value + '</b>';
